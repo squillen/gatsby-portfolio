@@ -94,3 +94,14 @@
       transform: translateY(0);
   }
 }
+
+.back-arrow {
+    transform: rotate(180deg);
+    width: 4rem;
+    height: 4rem;
+    color: white;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05) rotate(180deg);
+    }
+}

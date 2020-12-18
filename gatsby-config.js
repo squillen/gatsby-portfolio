@@ -1,13 +1,25 @@
 module.exports = {
   siteMetadata: {
-    title: "gatsby-portfolio",
+    title: "Sean Quillen Portfolio",
   },
   plugins: [
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-          implementation: require('sass')
+          implementation: require('sass'),
+          useResolveUrlLoader: true,
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Londrina Outline`,
+          'Oswald',
+          `source sans pro\:300,400,400i,700`
+        ],
+        display: 'swap'
+      }
     },
     {
       resolve: "gatsby-plugin-google-analytics",

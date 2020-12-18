@@ -1,0 +1,142 @@
+.section-container {
+  position: relative;
+  min-height: 85vh;
+}
+
+.section-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 12rem 0;
+  min-height: 70vh;
+
+  a:link, a:visited {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  } 
+
+}
+
+[class^="section-container-"] {
+  height: $section-image-height;
+  display: flex;
+  width: 80%;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  margin: 3rem 0;
+}
+
+.section-container-about {
+  justify-content: space-around;
+  margin-left: auto;
+
+  @include respond(phone) {
+    width: 100%;
+  } 
+}
+
+.section-container-photos {
+  margin: 0 auto;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.section-container-contact {
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.section-text-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__end {
+    align-items: flex-end;
+  }
+}
+
+[class^="section-block-"] {
+  color: $color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  height: 100%;
+  width: 24rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: $color-secondary-dark;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @include respond(tab-port) {
+    width: 20rem;
+    height: 20rem;
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+@mixin setBackground($path, $position) {
+  background: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url($path) no-repeat $position;
+  background-size: cover;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    @include setBackgroundHover($path, $position);
+    &:after {
+      content: attr(data-hover);
+      font-size: 5rem;
+    }
+  }
+}
+
+@mixin setBackgroundHover($path, $position) {
+  background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url($path) no-repeat $position;
+  background-size: cover;
+}
+
+.section-block-code {
+  @include setBackground("../../src/images/home/old_mac.jpg", right);
+  a:link {
+    text-decoration: none;
+  }
+}
+
+.section-block-photos {
+  @include setBackground("../../src/images/home/sedona_dog.jpg", right);
+}
+
+.section-block-about {
+  @include setBackground("../../src/images/home/personal_picture.jpg", left);
+}
+
+.section-about,
+.section-code,
+.section-photos {
+  @include section
+}
+
+.about-arrow {
+  display: block;
+}
+
+.contact-logo {
+  width: $contact-width;
+  height: $contact-height;
+}
