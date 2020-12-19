@@ -6,7 +6,7 @@ import '../../styles/main.scss'
 
 const IndexPage = () => {
   return (
-    <main className="container">
+    <main className="index-container">
       <Header />
       <Home />
       <Footer />
