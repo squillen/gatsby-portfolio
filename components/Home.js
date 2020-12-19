@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import straightArrow from '../src/images/svgs/straight-arrow.svg';
+import slightCurveArrow from '../src/images/svgs/slight-curve-arrow-outline.svg';
 import envelope from '../src/images/svgs/envelope.svg';
 import github from '../src/images/svgs/github.svg';
 import linkedin from '../src/images/svgs/linkedin.svg';
@@ -26,11 +27,14 @@ const Home = () => {
           </div>
       </section>
       <section className="section-container-photos">
-        <div className="section-text-container">
+        <div></div>
+        <Link data-hover="photos." className="section-block-photos" to="/photos"></Link>
+      </section>
+      <section className="section-container-photos">
+      <div className="section-text-container">
           <h2 className="description-text">say hi</h2>
-          <img className="arrow rotate45 about-arrow" src={straightArrow} alt="arrow pointing left to the word 'writes'"/>
+          <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing left to the word 'writes'"/>
         </div>
-        <Link data-hover="photos" className="section-block-photos" to="/photos"></Link>
       </section>
       <section className="section-container-contact">
         <a href=""><img className="contact-logo" src={github} alt="link to my github"/></a>
