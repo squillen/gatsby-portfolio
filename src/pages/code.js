@@ -1,5 +1,5 @@
 import * as React from "react"
-import BackButton from "../../components/BackButton"
+import DynamicHeader from "../../components/DynamicHeader"
 import '../../styles/main.scss'
 import WSIDT from '../images/code/what_should_i_do_tonight.png'
 import cherryTree from '../images/code/cherryTree_logo.png'
@@ -53,13 +53,7 @@ const projects = [
 const CodePage = () => {
   return (
     <main className="code-container">
-      <header className="code-header-container">
-        <BackButton />
-        <div className="center">
-          <h2 className="heading-primary--sub">my</h2>
-          <h1 className="heading-primary--main">code</h1>
-        </div>
-      </header>
+      <DynamicHeader header="my // code" />
       <section className="project-section-container">
         {
           projects.map(project => {

@@ -1,18 +1,11 @@
 import * as React from "react"
 import '../../styles/main.scss'
-import BackButton from "../../components/BackButton"
-
+import DynamicHeader from '../../components/DynamicHeader'
 
 const AboutPage = () => {
   return (
     <main className="container">
-      <header className="header-container">
-        <BackButton />
-        <div className="center">
-          <h1 className="heading-primary--main">About</h1>
-          <h2 className="heading-primary--sub">me</h2>
-        </div>
-      </header>
+    <DynamicHeader header="About Me" />
       <section className="about">
         <p>I live in Austin, TX.</p>
         <p>I am a software developer.</p>

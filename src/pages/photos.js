@@ -2,10 +2,11 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import '../../styles/main.scss'
+import DynamicHeader from "../../components/DynamicHeader"
 
 export const query = graphql`
   {
-    allTexasPhotosYaml {
+    allPhotosYaml {
       edges {
         node {
           alt
@@ -24,12 +25,14 @@ export const query = graphql`
 `
 
 const PhotosPage = ({ data }) => {
+  console.log('data :>> ', data);
   return (
     <main className="container">
-      photossssss
+      <DynamicHeader header="My Photos" />
       {
-        data.allTexasPhotosYaml.edges.map(({ node }) => (
+        data.allPhotosYaml.edges.map(({ node }) => (
           <Img
+            key={node.id}
             className="photo"
             fluid={node.image.childImageSharp.fluid}
             alt={node.alt}
