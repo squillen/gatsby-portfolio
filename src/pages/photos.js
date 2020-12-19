@@ -3,11 +3,12 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import '../../styles/main.scss'
 
-const photos = graphql`
+export const query = graphql`
   {
     allTexasPhotosYaml {
       edges {
         node {
+          alt
           image {
             childImageSharp {
               fluid {
@@ -15,23 +16,23 @@ const photos = graphql`
               }
             }
           }
+          id
         }
-      } 
+      }
     }
   }
 `
 
-const PhotosPage = () => {
-  console.log('photos :>> ', photos);
+const PhotosPage = ({ data }) => {
   return (
     <main className="container">
       photossssss
       {
-        photos && Array.isArray(photos) && photos.map(photo => (
+        data.allTexasPhotosYaml.edges.map(({ node }) => (
           <Img
             className="photo"
-            fixed={photo.file.childImageSharp.fluid}
-            alt="headshot"
+            fluid={node.image.childImageSharp.fluid}
+            alt={node.alt}
           />
         ))
       }
@@ -40,3 +41,11 @@ const PhotosPage = () => {
 }
 
 export default PhotosPage
+
+
+
+// childImageSharp {
+//   fluid {
+//     ...GatsbyImageSharpFluid
+//   }
+// }

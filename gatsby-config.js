@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Sean Quillen Portfolio",
+    siteUrl: 'https://seanquillen.com',
+    siteDescription: 'Portfolio for Sean Quillen, a software developer living in Austin, TX.'
   },
   plugins: [
     {
@@ -28,6 +30,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
+    `gatsby-transformer-yaml`,
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
@@ -41,10 +44,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images/`
       },
-      __key: "images",
     },
   ],
 };
