@@ -4,13 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-family: 'Londrina Outline', cursive;
+    font-family: $primary-font;
 }
 
 html {
     scroll-behavior: smooth;
-    background: rgb(255,144,144);
-    background: linear-gradient(22deg, rgba(255,144,144,1) 35%, rgba(221,67,67,1) 100%);
+   
     font-size: 87.5%; //1 rem = 14px; 14px/16px
 
     @include respond(tab-land) { // width < 1200?
@@ -29,8 +28,6 @@ html {
 body {
     box-sizing: border-box;
     color: $color-black;
-    padding: 3rem;
-
     @include respond(tab-port) {
         padding: 0;
     }

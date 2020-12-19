@@ -1,0 +1,58 @@
+.code-container {
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+
+.project-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-section {
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.section-left-side {
+  width: $logo-image-width;
+  height: $logo-image-height;
+  display: flex;
+  justify-content: center;
+  margin-right: 4rem;
+  @include respond(tab-port) {
+    width: 30vw;
+  }
+  @include respond(phone) {
+    width: 30vw;
+  }
+}
+
+
+.project-logo {
+  width: $logo-image-width;
+  height: $logo-image-height;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.project-name {
+  font-family: $secondary-font;
+}
+
+.section-right-side {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 35rem;
+  * {
+    font-family: $secondary-font;
+  }
+
+  @include respond(phone) {
+    width: 50vw;
+  }
+}

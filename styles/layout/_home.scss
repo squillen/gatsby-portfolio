@@ -48,7 +48,8 @@
 }
 
 .section-container-contact {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   justify-content: space-around;
   align-items: center;
 }
@@ -93,7 +94,8 @@
 }
 
 @mixin setBackground($path, $position) {
-  background: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url($path) no-repeat $position;
+  background: linear-gradient(to right, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url($path) no-repeat;
+  background-position: $position;
   background-size: cover;
   transition: all .2s ease-in-out;
 
@@ -107,7 +109,8 @@
 }
 
 @mixin setBackgroundHover($path, $position) {
-  background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url($path) no-repeat $position;
+  background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url($path) no-repeat;
+  background-position: $position;
   background-size: cover;
 }
 
@@ -123,7 +126,7 @@
 }
 
 .section-block-about {
-  @include setBackground("../../src/images/home/personal_picture.jpg", left);
+  @include setBackground("../../src/images/home/personal_picture.jpg", right);
 }
 
 .section-about,
