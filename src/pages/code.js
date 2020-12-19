@@ -65,7 +65,7 @@ const CodePage = () => {
           projects.map(project => {
             const { src, alt, href, name, tagline, description } = project
             return (
-              <section className="project-section">
+              <section key={name} className="project-section">
                 <div className="section-left-side">
                   {
                     href
@@ -79,7 +79,7 @@ const CodePage = () => {
                 </div>
                 <div className="section-right-side">
                   <h3>{tagline}</h3>
-                  <p>{description.map(d => <p>{d}</p>)}</p>
+                  <p>{description.map(d => <p key={d.slice(0, 5)}>{d}</p>)}</p>
                 </div>
               </section>
             )

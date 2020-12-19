@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import straightArrow from '../src/images/svgs/straight-arrow.svg';
-import slightCurveArrow from '../src/images/svgs/slight-curve-arrow-outline.svg';
 import envelope from '../src/images/svgs/envelope.svg';
 import github from '../src/images/svgs/github.svg';
 import linkedin from '../src/images/svgs/linkedin.svg';
@@ -37,9 +36,9 @@ const Home = () => {
         </div>
       </section>
       <section className="section-container-contact">
-        <a href=""><img className="contact-logo" src={github} alt="link to my github"/></a>
-        <a href=""><img className="contact-logo" src={linkedin} alt="link to my linkedin"/></a>
-        <a href=""><img className="contact-logo" src={envelope} alt="email me"/></a>
+        <a href="https://www.github.com/squillen"><img className="contact-logo" src={github} alt="link to my github"/></a>
+        <a href="https://www.linkedin.com/in/sean-quillen/"><img className="contact-logo" src={linkedin} alt="link to my linkedin"/></a>
+        <a href="mailto: sean.r.quillen@gmail.com"><img className="contact-logo" src={envelope} alt="email me"/></a>
       </section>
 
       {/* <section className="section-main">

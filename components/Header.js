@@ -1,5 +1,4 @@
 import * as React from "react"
-import turnArrow from '../src/images/svgs/turn-arrow.svg';
 import curveArrow from '../src/images/svgs/curve-arrow.svg';
 import slightCurveArrow from '../src/images/svgs/slight-curve-arrow-outline.svg';
 
