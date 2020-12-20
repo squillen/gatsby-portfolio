@@ -34,7 +34,7 @@
 
 .section-container-about {
   justify-content: space-around;
-  margin-left: auto;
+  margin: 0 auto;
 
   @include respond(phone) {
     width: 100%;
@@ -44,7 +44,7 @@
 .section-container-photos {
   margin: 0 auto;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .section-container-contact {
@@ -87,9 +87,9 @@
   @include respond(tab-port) {
     width: 20rem;
     height: 20rem;
-    &:not(:last-child) {
-      margin-bottom: 4rem;
-    }
+    // &:not(:last-child) {
+    //   margin-bottom: 4rem;
+    // }
   }
 }
 

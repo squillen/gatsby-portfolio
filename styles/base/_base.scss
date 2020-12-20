@@ -47,5 +47,9 @@ body {
 
 .description-text {
     font-size: 8rem;
+
+    @include respond(tab-port) {
+        font-size: 5rem;
+    }
 }
 

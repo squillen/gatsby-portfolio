@@ -14,10 +14,11 @@ const Home = () => {
           <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing down to the code section" />
         </div>
         <img className="arrow rotate180 about-arrow" src={straightArrow} alt="arrow pointing left to the word 'writes'"/>
-        <Link className="section-block-about" data-hover="about" to="/about">
-        </Link>
+        {/* MY PICTURE */}
+        <Link className="section-block-about" data-hover="about" to="/about"></Link>
       </section>
       <section className="section-container-about">
+        {/* CODE PICTURE */}
         <Link className="section-block-code" data-hover="code" to="/code"></Link>
           <img className="arrow about-arrow" src={straightArrow} alt="arrow pointing down to the code section" />
           <div className="section-text-container">
@@ -26,10 +27,10 @@ const Home = () => {
           </div>
       </section>
       <section className="section-container-photos">
-        <div></div>
+        {/* PHOTOS PICTURE */}
         <Link data-hover="photos." className="section-block-photos" to="/photos"></Link>
       </section>
-      <section className="section-container-photos">
+      <section className="section-container-about">
       <div className="section-text-container">
           <h2 className="description-text">say hi</h2>
           <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing left to the word 'writes'"/>
