@@ -5,7 +5,7 @@ import DynamicHeader from '../../components/DynamicHeader'
 const AboutPage = () => {
   return (
     <main className="container">
-    <DynamicHeader header="About Me" />
+    <DynamicHeader header="About" />
       <section className="about">
         <p>I live in Austin, TX.</p>
         <p>I am a software developer.</p>

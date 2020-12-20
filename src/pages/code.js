@@ -53,7 +53,7 @@ const projects = [
 const CodePage = () => {
   return (
     <main className="code-container">
-      <DynamicHeader header="my // code" />
+      <DynamicHeader header="Code" />
       <section className="project-section-container">
         {
           projects.map(project => {
