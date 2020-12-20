@@ -1,0 +1,65 @@
+- image: ./photos/newMexico/adobe.jpg
+  alt: Adobe door looking onto mountains
+  city: Albuquerque
+  description: Adobe door looking onto mountains
+
+- image: ./photos/newMexico/birds_on_wire.jpg
+  alt: Birds on wire in Albuquerque Old Towne
+  city: Albuquerque
+  description: Birds on wire in Albuquerque Old Towne
+  
+- image: ./photos/newMexico/brooding_fence.jpg
+  alt: Rustic fence inside pueblo overlooking brewing storm
+  city: Albuquerque
+  description: Rustic fence inside pueblo overlooking brewing storm
+
+- image: ./photos/newMexico/door_into_greens.jpg
+  alt: Door cut-out exposing garden from street
+  city: Santa Fe
+  description: Door cut-out exposing garden from street
+
+- image: ./photos/newMexico/face_and_window.jpg
+  alt: Head sculpture sitting next to red window frame outside art store
+  city: Santa Fe
+  description: Head sculpture sitting next to red window frame outside art store
+
+- image: ./photos/newMexico/fire_hydrant.jpg
+  alt: fire hydrant with sunflower growing behind on Santa Fe street
+  city: Santa Fe
+  description: fire hydrant with sunflower growing behind on Santa Fe street
+
+- image: ./photos/newMexico/fords_in_abq.jpg
+  alt: Two old Ford owners talking in front of Albuquerque Old Towne park
+  city: Albuquerque
+  description: Two old Ford owners talking in front of Albuquerque Old Towne park
+
+- image: ./photos/newMexico/mill_sky.jpg
+  alt: One of many grain mills passed on a small New Mexican road
+  city: Somewhere
+  description: One of many grain mills passed on a small New Mexican road
+
+- image: ./photos/newMexico/NM_squirrel.jpg
+  alt: squirrel at Bandelier National Monument
+  city: Bandelier National Monument
+  description: squirrel at Bandelier National Monument
+
+- image: ./photos/newMexico/pueblo_pammy.jpg
+  alt: Pam in the entrance of a pueblo just outside of Albuquerque and a looming storm
+  city: Albuquerque
+  description: Pam in the entrance of a pueblo just outside of Albuquerque and a looming storm
+
+- image: ./photos/newMexico/pueblo_wall.jpg
+  alt: A wall of a pueblo with long shadows cast from the supporting wooden beams
+  city: Albuquerque
+  description: A wall of a pueblo with long shadows cast from the supporting wooden beams
+
+- image: ./photos/newMexico/red_window.jpg
+  alt: Head sculpture sitting next to red window frame outside art store
+  city: Santa Fe
+  description: Head sculpture sitting next to red window frame outside art store
+
+- image: ./photos/newMexico/roof_sunset.jpg
+  alt: A rooftop bar at sunset
+  city: Albuquerque
+  description: A rooftop bar at sunset
+

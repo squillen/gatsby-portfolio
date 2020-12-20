@@ -1,4 +1,64 @@
-- image: ./photos/texas/coopcoop_comp.jpg
+- image: ./photos/texas/austin_skyline.jpg
+  alt: Austin Skyline
+  city: Austin
+  description: Austin skyline on a beautiful sunny day
+
+- image: ./photos/texas/birds_playing.jpg
+  alt: Birds playing in old birdhouse
+  city: Austin
+  description: Birds playing in an old birdhouse. I had to race to find my camera, change lenses, and snap this before they left!
+
+- image: ./photos/texas/buick_grill.jpg
+  alt: A Buick with a bad-ass rat emblem
+  city: Bastrop
+  description: A Buick with a bad-ass rat emblem
+
+- image: ./photos/texas/building_side_exit.jpg
+  alt: Door on side of building with staircase down
+  city: Bastrop
+  description: A door on the second floor
+
+- image: ./photos/texas/butterfly_on_flower.jpg
+  alt: Butterfly on flower
+  city: Austin
+  description: Butterfly on flower
+
+- image: ./photos/texas/coopcoop.jpg
   alt: Coop Coop
-- image: ./photos/texas/flowers_comp.jpg
-  alt: Flowers in Austin
+  city: Austin
+  description: Foster dog Coop
+
+- image: ./photos/texas/couple_biking.jpg
+  alt: couple biking on bridge
+  city: Austin
+  description: Couple biking down Congress bridge
+
+- image: ./photos/texas/flowers.jpg
+  alt: Close up of flowers
+  city: Austin
+  description: Flowers in Austin park
+
+- image: ./photos/texas/guy_fishing.jpg
+  alt: Close up on guy's fishing gear and his legs
+  city: Austin
+  description: Close up on guy's fishing gear and his legs
+
+- image: ./photos/texas/jets.jpg
+  alt: Jets flying over austin
+  city: Austin
+  description: Jets flying over Austin
+
+- image: ./photos/texas/lamp_in_sky.jpg
+  alt: Lamp in sky at night
+  city: Austin
+  description: Lamp in sky at night
+
+- image: ./photos/texas/mindy.jpg
+  alt: Old poodle peaking from behind tree
+  city: Austin
+  description: Old poodle peaking from behind tree
+
+- image: ./photos/texas/pammy_lady_bird.jpg
+  alt: Girl in front of Lady Bird Lake
+  city: Austin
+  description: My beautiful girlfriend standing in front of Lady Bird Lake
