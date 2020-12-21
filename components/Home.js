@@ -1,7 +1,13 @@
 import * as React from "react"
 import { Link } from "gatsby"
+
+// ARROWS
 import straightArrow from '../src/images/svgs/arrows/straight-arrow.svg';
 import slightCurve from '../src/images/svgs/arrows/slight-curve-arrow-outline.svg';
+import wavyTurn from '../src/images/svgs/arrows/wavy-straight.svg';
+import smileyTurn from '../src/images/svgs/arrows/smiley-turn.svg';
+import loopArrow from '../src/images/svgs/arrows/loop-arrow-straight.svg';
+// ICONS
 import envelope from '../src/images/svgs/icons/envelope.svg';
 import github from '../src/images/svgs/icons/github.svg';
 import linkedin from '../src/images/svgs/icons/linkedin.svg';
@@ -14,18 +20,20 @@ const Home = () => {
           {/* MY PICTURE */}
           <Link className="section-block-about" data-hover="about" to="/about"></Link>
           <div className="section-text-container">
-            <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing down to the code section" />
-            <h2 className="description-text">writes</h2>
+            <img className="arrow rotate90 about-arrow" src={wavyTurn} alt="arrow pointing left to the word 'writes'"/>
+            <div className="row-container">
+            </div>
+              <h2 className="description-text">writes</h2>
+              <img className="arrow rotate90 about-arrow" src={loopArrow} alt="arrow pointing down to the code section" />
           </div>
-          <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing left to the word 'writes'"/>
         </section>
         <section className="section-container-about">
           {/* CODE PICTURE */}
           <Link className="section-block-code" data-hover="code" to="/code"></Link>
-            <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing down to the code section" />
+            <img className="arrow rotate90 about-arrow" src={wavyTurn} alt="arrow pointing down to the word 'photos'" />
             <div className="section-text-container">
               <h2 className="description-text">and takes</h2>
-              <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing down to the word 'photos'"/>
+              <img className="arrow rotate90 about-arrow" src={loopArrow} alt="arrow pointing down to the photos section"/>
             </div>
         </section>
         <section className="section-container-photos">
