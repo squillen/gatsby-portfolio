@@ -5,7 +5,7 @@ import backArrow from '../src/images/svgs/arrows/straight-arrow-outline.svg'
 const BackButton = () => {
   return (
     <Link to="/">
-      <img className="back-arrow back" src={backArrow} alt="back button" />
+      <img className="button-arrow rotate180 back" src={backArrow} alt="back button" />
     </Link>
   )
 }

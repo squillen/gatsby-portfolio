@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
+import { FaChevronUp } from 'react-icons/fa'
 import Img from "gatsby-image"
+import arrow from '../images/svgs/arrows/straight-arrow-outline-white.svg'
 import DynamicHeader from "../../components/DynamicHeader"
 import Modal from "../../components/Modal"
 import '../../styles/main.scss'
@@ -27,8 +29,11 @@ const PhotosPage = ({ data }) => {
   const currentImage = imageIndex >= 0 && imageSet[imageIndex].node
   const content = currentImage && (
     <div className="image-carousel">
-      <div className="close" onClick={() => setImageIndex(-1)}>X</div>
-      <div className="prev" onClick={() => scrollImages(-1)}>-</div>
+      <div className="close-btn-container">
+        <div className="close-btn" onClick={() => setImageIndex(-1)}>X</div>
+
+      </div>
+      <div className="prev" onClick={() => scrollImages(-1)}><img src={arrow} className="button-arrow" /></div>
       <figure className="carousel-photo">
         <Img
           key={currentImage.id}
@@ -39,7 +44,7 @@ const PhotosPage = ({ data }) => {
         />
         <figcaption className="photo-caption">{`${currentImage.city} - ${currentImage.description}`}</figcaption>
       </figure>
-      <div className="next" onClick={() => scrollImages(1)}>+</div>
+      <div className="next" onClick={() => scrollImages(1)}><img src={arrow} className="button-arrow" /></div>
     </div>
   )
 
@@ -116,7 +121,7 @@ function displayPhotos(data, header, setSelectedImageInfo) {
     <section className="photos-container">
       <div className="section-header">
         <h2 className="photos-container-header">{header}</h2>
-        <Link className="home" to="#home">^</Link>
+        <Link className="home" to="#home"><FaChevronUp /></Link>
       </div>
       <ul className="photos-list" id={header}>
         {

@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
   * {
     font-family: $secondary-font;
   }
@@ -95,6 +96,7 @@
 
 .home {
   position: absolute;
+  cursor: pointer;
   right: 8vw;
   justify-self: flex-end;
   align-self: flex-end;
@@ -125,17 +127,6 @@
   margin: 1rem;
   width: $photo-width;
   height: $photo-height;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
 }
 
 .photo {
@@ -191,13 +182,26 @@
   padding: 16px;
   margin-top: -50px;
   color: white;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 3rem;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
   z-index: 1;
+
+  &:active {
+    transform: scale(.9);
+  }
+}
+
+.prev {
+  transform: rotate(180deg);
+  transition: none;
+}
+
+.prev:hover {
+  transform: rotate(180deg);
 }
 
 .next {
@@ -205,19 +209,37 @@
   border-radius: 3px 0 0 3px;
 }
 
-.close {
-  cursor: pointer;
-  color: white;
+.close-btn-container {
   position: absolute;
   top: 10px;
   right: 25px;
-  font-size: 35px;
+}
+
+.close-btn {
+  position: relative;
+  font-family: $primary-font;
+
+  cursor: pointer;
+  font-size: 4rem;
   font-weight: bold;
   z-index: 1;
-
-  &:hover
-  &:focus {
-    color: #999;
-    text-decoration: none;
+  color: $color-grey-dark-2;
+  text-transform: uppercase;
+  &:before {
+    @include blackHover;
+    font-family: $primary-font;
+    content: "X";
   }
+  &:hover:before {
+    @include blackHover;
+    font-family: $primary-font;
+    width: 100%;
+  }
+
+
+  // &:hover
+  // &:focus {
+  //   color: #999;
+  //   text-decoration: none;
+  // }
 }

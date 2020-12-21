@@ -1,4 +1,7 @@
 .back {
   position: absolute;
   left: 2rem;
+  &:hover {
+    transform: scale(1.05) rotate(180deg);
+  }
 }
