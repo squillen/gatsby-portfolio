@@ -10,6 +10,11 @@
   }
 }
 
+.header-heading {
+  @include respond(tab-port) {
+    width: 48vw;
+  }
+}
 
 @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
@@ -17,12 +22,11 @@
   
 }
 
-
 .header-turn-arrow {
   display: flex;
-  @include respond(phone) {
-    display: none;
-  }
+  // @include respond(phone) {
+  //   display: none;
+  // }
 }
 
 .header-curve-arrow {

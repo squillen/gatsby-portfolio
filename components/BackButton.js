@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import backArrow from '../src/images/svgs/straight-arrow-outline.svg'
+import backArrow from '../src/images/svgs/arrows/straight-arrow-outline.svg'
 
 const BackButton = () => {
   return (

@@ -1,3 +1,46 @@
+.toc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+  * {
+    font-family: $secondary-font;
+  }
+}
+
+.toc-header {
+  font-size: 3.5rem;
+}
+
+.state-options-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  a:link {
+    text-decoration: none;
+    &:hover {
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+      text-decoration: underline;
+      background: rgba(0, 0, 0, .5);
+      border-radius: 1rem;
+    }
+  }
+  li {
+    margin: 1.5rem;
+    color: $color-black;
+  }
+}
+
 .photos-container {
   width: 100%;
   display: flex;
@@ -6,9 +49,28 @@
   margin: 5rem 0;
 }
 
+.section-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home {
+  position: absolute;
+  right: 8vw;
+  justify-self: flex-end;
+  align-self: flex-end;
+  font-size: 3rem;
+  text-decoration: none;
+  color: $color-black;
+}
+
 .photos-container-header {
   text-align: center;
   font-size: 5rem;
+  justify-self: center;
+  align-self: center;
 }
 
 .photos-list {
@@ -33,13 +95,29 @@
   width: 100%;
   height: 100%;
   display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
   background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
 }
 
 .photo {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  transition: all .2s ease-in-out;
+  &:hover,
+  img:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+    &:after {
+      content: attr(data-hover);
+      font-size: 5rem;
+    }
+  }
 } 
 
 // IMAGE CAROUSEL
@@ -52,6 +130,19 @@
 .carousel-photo {
   width: 100%;
   height: 100%;
+  position: relative;
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 0;
+  font-family: $secondary-font;
+  background: rgbaBlack(0.5);
+  color: white;
+  min-height: 4rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
 }
 
 .prev,

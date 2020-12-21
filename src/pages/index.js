@@ -9,7 +9,7 @@ const IndexPage = () => {
     <main className="index-container">
       <Header />
       <Home />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   )
 }

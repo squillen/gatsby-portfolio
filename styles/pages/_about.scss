@@ -1,14 +1,41 @@
-.container {
+.about-container {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.about {
+.sections {
+  display: flex;
+}
+
+@mixin section {
   padding: 4rem;
   margin-top: 6rem;
   animation: moveInBottom 1s ease-out;
-
+  width: 50%;
   p {
     font-family: $secondary-font;
     font-size: 2rem;
+  }
+}
+
+.about-left {
+  @include section;
+}
+
+.about-right {
+  @include section;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0;
+  padding: 0;
+
+  .about-right-picture {
+    background: url('../../src/images/home/personal_picture.jpg') left no-repeat;
+    background-size: cover;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
   }
 }

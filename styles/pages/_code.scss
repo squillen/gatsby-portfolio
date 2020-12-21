@@ -17,7 +17,7 @@
   padding: 5rem;
 }
 
-.section-left-side {
+.section-left {
   width: $logo-image-width;
   height: $logo-image-height;
   display: flex;
@@ -43,13 +43,47 @@
   font-family: $secondary-font;
 }
 
-.section-right-side {
+
+@mixin blob {
+  position: absolute;
+  z-index: -1;
+  width: 14rem;
+}
+
+.section-right {
+  position: relative;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
   width: 35rem;
   * {
     font-family: $secondary-font;
+  }
+
+  &-blob1 {
+    @include blob;
+    bottom: (calc(random(3) * -1))+rem;
+    right: 0;
+  }
+  &-blob2 {
+    @include blob;
+    bottom: random(20)+px;
+    left: random(1)+rem;
+  }
+  &-blob3 {
+    @include blob;
+    bottom: random(10)+px;
+    left: random(6)+rem;
+  }
+  &-blob4 {
+    @include blob;
+    width: 20rem;
+    bottom: -5rem;
+    right: random(1)+rem;
+  }
+  &-blob5 {
+    @include blob;
+    bottom: 1rem;
+    left: -5rem;
   }
 
   @include respond(phone) {

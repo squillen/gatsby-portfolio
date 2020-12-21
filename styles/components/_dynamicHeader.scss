@@ -1,6 +1,5 @@
 
-.header-container {
-  position: relative;
+.dynamicHeader-container {
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -9,13 +8,39 @@
 }
 
 .center {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-self: center;
 }
 
-.back {
-  position: absolute;
-  left: 2rem;
+@mixin arrow {
+  display: flex;
+  // position: absolute;
+}
+
+.arrow-header {
+  &-left {
+    @include arrow;
+  }
+  &-right {
+    @include arrow;
+  }
+}
+
+@mixin header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  @include header;
+}
+
+.sub-header-container {
+  @include header;
+  justify-content: flex-end;
 }

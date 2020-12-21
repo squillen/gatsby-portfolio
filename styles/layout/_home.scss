@@ -3,6 +3,22 @@
   min-height: 85vh;
 }
 
+.desktop {
+  width: 80%;
+  margin: 0 auto;
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .section-main {
   display: flex;
   justify-content: space-between;
@@ -25,17 +41,19 @@
 [class^="section-container-"] {
   height: $section-image-height;
   display: flex;
-  width: 80%;
   justify-content: flex-end;
   align-items: center;
   position: relative;
   margin: 3rem 0;
+  @include respond(tab-port) {
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .section-container-about {
   justify-content: space-around;
   margin: 0 auto;
-
   @include respond(phone) {
     width: 100%;
   } 
@@ -45,6 +63,12 @@
   margin: 0 auto;
   align-items: flex-end;
   justify-content: flex-end;
+
+  @include respond(tab-port) {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .section-container-contact {
@@ -52,8 +76,17 @@
   margin: 0 auto;
   justify-content: space-around;
   align-items: center;
+  @include respond(phone) {
+    margin-top: 8rem;
+  }
 }
 
+.contact-icons-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
 
 .section-text-container {
   display: flex;
@@ -64,6 +97,13 @@
 
   &__end {
     align-items: flex-end;
+  }
+
+  @include respond(tab-port) {
+    height: 95%;
+  }
+  @include respond(tab-phone) {
+    height: 80%;
   }
 }
 
@@ -87,9 +127,6 @@
   @include respond(tab-port) {
     width: 20rem;
     height: 20rem;
-    // &:not(:last-child) {
-    //   margin-bottom: 4rem;
-    // }
   }
 }
 
@@ -99,8 +136,9 @@
   background-size: cover;
   transition: all .2s ease-in-out;
 
-  &:hover {
+  &:hover, &:active {
     @include setBackgroundHover($path, $position);
+    
     &:after {
       content: attr(data-hover);
       font-size: 5rem;
@@ -123,10 +161,13 @@
 
 .section-block-photos {
   @include setBackground("../../src/images/home/sedona_dog.jpg", right);
+  @include respond(phone) {
+    margin-top: 3rem;
+  }
 }
 
 .section-block-about {
-  @include setBackground("../../src/images/home/personal_picture.jpg", right);
+  @include setBackground("../../src/images/home/personal_picture.jpg", left);
 }
 
 .section-about,
@@ -135,8 +176,13 @@
   @include section
 }
 
-.about-arrow {
+.about-arrow,
+.photos-arrow {
   display: block;
+}
+
+.photos-arrow {
+  align-self: flex-end;
 }
 
 .contact-logo {

@@ -4,4 +4,8 @@
 
 @function multiply($x, $y) {
   @return $x * $y
-}
+};
+
+@function rgbaBlack($level) {
+  @return rgba(0, 0, 0, $level)
+};
