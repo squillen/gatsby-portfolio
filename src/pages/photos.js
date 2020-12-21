@@ -49,8 +49,9 @@ const PhotosPage = ({ data }) => {
       <section className="toc">
         <h3 className="toc-header">Locations:</h3>
         <ul className="state-options-list">
-          <Link to="#New Mexico"><li>New Mexico</li></Link>
-          <Link to="#Texas"><li>Texas</li></Link>
+          <Link to="#New Mexico"><li className="list-item-newMexico">New Mexico</li></Link>
+          <Link to="#Texas"><li className="list-item-texas">Texas</li></Link>
+          {/* <Link to="#Texas"><li className="list-item-florida">Florida</li></Link> */}
         </ul>
       </section>
       {/* NM PHOTOS */}

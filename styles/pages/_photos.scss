@@ -13,6 +13,19 @@
   font-size: 3.5rem;
 }
 
+@mixin blackHover {
+  font-family: $secondary-font;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $color-black;
+  white-space: nowrap;
+  width: 0;
+  overflow: hidden;
+  line-break: unset;
+  transition: all 0.5s;
+}
+
 .state-options-list {
   list-style: none;
   display: flex;
@@ -25,19 +38,43 @@
   a:link {
     text-decoration: none;
     &:hover {
-      height: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem 0;
-      text-decoration: underline;
-      background: rgba(0, 0, 0, .5);
-      border-radius: 1rem;
+      // height: 3rem;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // padding: 2rem 0;
+      // text-decoration: underline;
+      // background: rgba(0, 0, 0, .5);
+      // border-radius: 1rem;
     }
   }
   li {
     margin: 1.5rem;
-    color: $color-black;
+    color: $color-grey-dark-2;
+    text-transform: uppercase;
+    position: relative;
+    &:before {
+      @include blackHover;
+    }
+    &:hover:before {
+      @include blackHover;
+      width: 100%;
+    }
+  }
+}
+
+.list-item {
+  &-newMexico:before {
+    content: "New Mexico";
+  }
+  &-texas:before {
+    content: "Texas"
+  }
+  &-florida:before {
+    content: "Florida"
+  }
+  &-texas:before {
+    content: "Texas"
   }
 }
 
