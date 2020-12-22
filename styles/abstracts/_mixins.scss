@@ -22,6 +22,12 @@
   }
 }
 
+@mixin displayNoneOnPhone {
+  @include respond(phone) {
+    display: none;
+  }
+}
+
 @mixin blackHover {
   font-family: $secondary-font;
   position: absolute;

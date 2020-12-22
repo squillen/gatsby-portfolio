@@ -23,9 +23,11 @@
 .arrow-header {
   &-left {
     @include arrow;
+    @include displayNoneOnPhone;
   }
   &-right {
     @include arrow;
+    @include displayNoneOnPhone;
   }
 }
 

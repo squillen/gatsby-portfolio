@@ -43,7 +43,7 @@ const projects = [
     description: [
       "When I was in my teens I started sending family members emails with the charities I'd like them to donate to instead of giving me gifts. (I'm not a saint, I didn't do it every year, OK?)",
       "I wanted them to donate for a couple of reasons:",
-      "-  I was fortunate enough to really just not need anything else \n-  Clutter is annoying\n  -  I loved the smug sense of magnanimity I got from it. Kidding.",
+      "-  I was fortunate enough to really just not need anything else. \n-  Clutter is annoying. \n  -  I lived off of the smug sense of magnanimity I got from it. Kidding.",
       "When I got older and saw into the world of wedding registries, I again thought that I just wouldn't need all of that stuff! That's when I put two and two together and thought of making this site.",
       "cherryTree allows people who are celebrating special occasions to ask others to donate in lieu of giving gifts.",
       "It's a MERN app deployed via Azure (and Mongo Cosmos DB). Emails sent via mailgun. Payments processed with Stripe. Images hosted on AWS s3."
@@ -84,7 +84,7 @@ const CodePage = () => {
   const [selectedProject, setSelectedProject] = useState('wsidt')
   function handleProjectList({ codeRef, name }) {
     return (
-      <li onClick={() => setSelectedProject(codeRef)} className={selectedProject === codeRef ? 'selected' : `list-item-${codeRef}`}>{name}</li>
+      <li onClick={() => setSelectedProject(codeRef)} className={selectedProject === codeRef ? `selected-${codeRef}` : `list-item-${codeRef}`}>{name}</li>
     )
   }
 
@@ -96,7 +96,7 @@ const CodePage = () => {
         {blobName && <img src={blobs[blobName]} alt="blob" className='blob' />}
       </div>
       <div className="description-container">
-      <div className="description" style={href ? {} : { width: '70%' }}>
+      <div className="description">
           {description.map(d => <ReactMarkdown>{d}</ReactMarkdown>)}
         </div>
         {href && (

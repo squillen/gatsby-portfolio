@@ -10,6 +10,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
 }
 
 .projects {
@@ -23,28 +26,22 @@
   font-size: 3rem;
   letter-spacing: 0.2rem;
   font-family: $secondary-font;
+  @include respond(tab-port) {
+    min-height: 20vh;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    li {
+      margin: 0;
+    }
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 }
 
 .hidden {
   display: none;
-}
-
-.list-item {
-  &-wsidt:before {
-    content: "What Should I Do Tonight";
-  }
-  &-cherryTree:before {
-    content: "cherryTree"
-  }
-  &-cleannUpp:before {
-    content: "Cleann Upp"
-  }
-  &-doAustin:before {
-    content: "Do Austin"
-  }
-  &-portfolio:before {
-    content: "Portfolio"
-  }
 }
 
 @mixin listItem {
@@ -56,12 +53,6 @@
   text-transform: uppercase;
   position: relative;
   font-weight: 900;
-}
-
-.selected {
-  @include listItem;
-
-  color: $color-black
 }
 
 [class^="list-item"] {
@@ -77,8 +68,107 @@
   }
 }
 
+.list-item {
+  &-wsidt {
+    &:before {
+      color: $color-wsidt;
+      content: "What Should I Do Tonight";
+    }
+    &:hover:before {
+      @include blackHover;
+      color: $color-wsidt;
+      font-family: $primary-font;
+      width: 100%;
+    }
+  }
+  &-cherryTree {
+    &:before {
+      color: $color-cherryTree;
+      content: "cherryTree";
+    }
+    &:hover:before {
+      @include blackHover;
+      color: $color-cherryTree;
+      font-family: $primary-font;
+      width: 100%;
+    }
+  }
+  &-cleannUpp {
+    &:before {
+      color: $color-cleannUpp;
+      content: "Cleann Upp";
+    }
+    &:hover:before {
+      @include blackHover;
+      color: $color-cleannUpp;
+      font-family: $primary-font;
+      width: 100%;
+    }
+  }
+  &-doAustin {
+    &:before {
+      color: $color-doAustin;
+      content: "Do Austin";
+    }
+    &:hover:before {
+      @include blackHover;
+      color: $color-doAustin;
+      font-family: $primary-font;
+      width: 100%;
+    }
+  }
+  &-portfolio {
+    &:before {
+      color: $color-portfolio;
+      content: "Portfolio";
+    }
+    &:hover:before {
+      @include blackHover;
+      color: $color-portfolio;
+      font-family: $primary-font;
+      width: 100%;
+    }
+  }
+
+  // &-cherryTree:before {
+  //   content: "cherryTree"
+  // }
+  // &-cleannUpp:before {
+  //   content: "Cleann Upp"
+  // }
+  // &-doAustin:before {
+  //   content: "Do Austin"
+  // }
+  // &-portfolio:before {
+  //   content: "Portfolio"
+  // }
+}
+
+.selected {
+  &-wsidt {
+    @include listItem;
+    color: $color-wsidt;
+  }
+  &-cherryTree {
+    @include listItem;
+    color: $color-cherryTree;
+  }
+  &-cleannUpp {
+    @include listItem;
+    color: $color-cleannUpp;
+  }
+  &-doAustin {
+    @include listItem;
+    color: $color-doAustin;
+  }
+  &-portfolio {
+    @include listItem;
+    color: $color-portfolio;
+  }
+}
+
 [class^="project-container"] {
-  height: 50rem;
+  height: 55rem;
   width: 100%;
   align-self: flex-start;
   font-size: 4rem;
@@ -104,6 +194,9 @@
   position: relative;
   &-header {
     font-size: 5rem;
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
   }
   margin-bottom: 3rem;
 }
@@ -119,7 +212,7 @@
     margin-left: 3.3rem;
   }
 
-  @include respond(tab-land) {
+  @include respond(phone) {
     width: 100%;
   }
 }
@@ -164,5 +257,8 @@
   z-index: -1;
   width: 18rem;
   top: -4rem;
-  left: -3rem
+  left: -3rem;
+  @include respond(tab-port) {
+    top: -6rem;
+  }
 }
