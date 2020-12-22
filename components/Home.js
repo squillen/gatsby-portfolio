@@ -1,16 +1,32 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { FaRegHandPaper } from 'react-icons/fa'
 
 // ARROWS
 import straightArrow from '../src/images/svgs/arrows/straight-arrow.svg';
 import slightCurve from '../src/images/svgs/arrows/slight-curve-arrow-outline.svg';
 import wavyTurn from '../src/images/svgs/arrows/wavy-straight.svg';
-import smileyTurn from '../src/images/svgs/arrows/smiley-turn.svg';
 import loopArrow from '../src/images/svgs/arrows/loop-arrow-straight.svg';
 // ICONS
 import envelope from '../src/images/svgs/icons/envelope.svg';
 import github from '../src/images/svgs/icons/github.svg';
 import linkedin from '../src/images/svgs/icons/linkedin.svg';
+
+const ContactSection = () => {
+  return (
+    <section className="section-container-contact">
+          <div className="section-text-container">
+            <h2 className="description-text">say hi</h2>
+            <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing left to the word 'writes'"/>
+          </div>
+          <div className="contact-icons-container">
+            <a href="https://www.github.com/squillen"><img className="contact-logo" src={github} alt="link to my github"/></a>
+            <a href="https://www.linkedin.com/in/sean-quillen/"><img className="contact-logo" src={linkedin} alt="link to my linkedin"/></a>
+            <a href="mailto: sean.r.quillen@gmail.com"><img className="contact-logo" src={envelope} alt="email me"/></a>
+          </div>
+        </section>
+  )
+}
 
 const Home = () => {
   return (
@@ -40,17 +56,7 @@ const Home = () => {
           {/* PHOTOS PICTURE */}
           <Link data-hover="photos." className="section-block-photos" to="/photos"></Link>
         </section>
-        <section className="section-container-contact">
-          <div className="section-text-container">
-            <h2 className="description-text">say hi</h2>
-            <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing left to the word 'writes'"/>
-          </div>
-          <div className="contact-icons-container">
-            <a href="https://www.github.com/squillen"><img className="contact-logo" src={github} alt="link to my github"/></a>
-            <a href="https://www.linkedin.com/in/sean-quillen/"><img className="contact-logo" src={linkedin} alt="link to my linkedin"/></a>
-            <a href="mailto: sean.r.quillen@gmail.com"><img className="contact-logo" src={envelope} alt="email me"/></a>
-          </div>
-        </section>
+        <ContactSection />
       </div>
 
 
@@ -77,17 +83,7 @@ const Home = () => {
           {/* PHOTOS PICTURE */}
           <Link data-hover="photos." className="section-block-photos" to="/photos"></Link>
         </section>
-        <section className="section-container-about">
-        <div className="section-text-container">
-            <h2 className="description-text">say hi</h2>
-            <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing left to the word 'writes'"/>
-          </div>
-        </section>
-        <section className="section-container-contact">
-          <a href="https://www.github.com/squillen"><img className="contact-logo" src={github} alt="link to my github"/></a>
-          <a href="https://www.linkedin.com/in/sean-quillen/"><img className="contact-logo" src={linkedin} alt="link to my linkedin"/></a>
-          <a href="mailto: sean.r.quillen@gmail.com"><img className="contact-logo" src={envelope} alt="email me"/></a>
-        </section>
+        <ContactSection />
       </div>
 
       {/* <section className="section-main">
