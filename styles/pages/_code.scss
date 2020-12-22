@@ -3,34 +3,99 @@
   padding: 3rem;
 }
 
-
 .project-section-container {
+  width: 100%;
+  height: 100%;
+  min-height: 70vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.project-section {
+.projects {
   display: flex;
-  justify-content: center;
-  padding: 5rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  height: 100%;
+  min-height: 70vh;
+  list-style: none;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-family: $secondary-font;
 }
 
-.section-left {
-  width: $logo-image-width;
-  height: $logo-image-height;
-  display: flex;
-  justify-content: center;
-  margin-right: 4rem;
-  @include respond(tab-port) {
-    width: 30vw;
+.hidden {
+  display: none;
+}
+
+.list-item {
+  &-wsidt {
+    &:before {
+      content: "What Should I Do Tonight";
+    }
+    // &:hover + section .project-container-wsidt {
+    //   display: block;
+    // }
   }
-  @include respond(phone) {
-    width: 30vw;
+  &-cherryTree:before {
+    content: "cherryTree"
+  }
+  &-cleannUpp:before {
+    content: "Cleann Upp"
+  }
+  &-doAustin:before {
+    content: "Do Austin"
+  }
+  &-portfolio:before {
+    content: "Portfolio"
   }
 }
 
+@mixin listItem {
+  margin: 1.5rem;
+  display: block;
+  white-space: nowrap;
+  cursor: pointer;
+  color: $color-grey-dark-2;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 900;
+}
+
+.selected {
+  @include listItem;
+  color: $color-black
+}
+
+[class^="list-item"] {
+  @include listItem;
+  &:before {
+    @include blackHover;
+    font-family: $primary-font;
+  }
+  &:hover:before {
+    @include blackHover;
+    font-family: $primary-font;
+    width: 100%;
+  }
+}
+
+// .list-item {
+//   &-selected {
+//     &-wsidt {
+//       @include blackHover;
+//       font-family: $primary-font;
+//     }
+//   }
+// }
+
+[class^="project-container"] {
+  height: 100%;
+  width: 100%;
+  font-size: 4rem;
+  overflow: hidden;
+}
 
 .project-logo {
   width: $logo-image-width;
@@ -41,6 +106,7 @@
 
 .project-name {
   font-family: $secondary-font;
+  position: relative;
 }
 
 
@@ -66,19 +132,19 @@
   }
   &-blob2 {
     @include blob;
-    bottom: random(20)+px;
-    left: random(1)+rem;
+    bottom: -1rem;
+    left: -5rem;
   }
   &-blob3 {
     @include blob;
     bottom: random(10)+px;
-    left: random(6)+rem;
+    left: -5rem;
   }
   &-blob4 {
     @include blob;
     width: 20rem;
     bottom: -5rem;
-    right: random(1)+rem;
+    left: 5rem;
   }
   &-blob5 {
     @include blob;

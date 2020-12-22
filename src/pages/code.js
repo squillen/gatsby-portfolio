@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState } from "react"
 import DynamicHeader from "../../components/DynamicHeader"
 import '../../styles/main.scss'
 import WSIDT from '../images/code/what_should_i_do_tonight.png'
@@ -41,7 +41,7 @@ const projects = [
       'Got a celebration and want to do some good? Or maybe you just don’t need anything else right now. If so, ask people to donate in name of your celebration instead!',
       'MERN app deployed via Azure (and Mongo Cosmos DB). Emails sent via mailgun. Payments processed with Stripe. Images hosted on AWS s3.'
     ],
-    // blobName: 'blob2',
+    blobName: 'blob2',
 
   },
   {
@@ -71,35 +71,33 @@ const projects = [
   },
 ]
 const CodePage = () => {
+  const [selectedProject, setSelectedProject] = useState('wsidt')
+  console.log('selectedProject :>> ', selectedProject);
   return (
     <main className="code-container">
       <DynamicHeader header="Code" headerArrowRight />
       <section className="project-section-container">
-        {
-          projects.map(project => {
-            const { blobName, src, alt, href, name, tagline, description } = project
-            return (
-              <section key={name} className="project-section">
-                <div className="section-left">
-                  {
-                    href
-                      ? (
-                        <a href={href} rel="noreferrer" target="_blank">
-                          <img className="project-logo" src={src} alt={alt}/>
-                        </a>
-                      )
-                      : <h2 className="project-name">{name}</h2>
-                  }
-                </div>
-                <div className="section-right">
-                  <h3>{tagline}</h3>
-                  <p>{description.map(d => <p key={d.slice(0, 5)}>{d}</p>)}</p>
-                  {blobName && <img src={blobs[blobName]} alt="blob" className={`section-right-${blobName}`} />}
-                </div>
-              </section>
-            )
-          })
-        }
+        {/* <ul className="projects">
+          <li className="list-item-wsidt">What Should I Do Tonight</li>
+          <li className="list-item-cherryTree">cherryTree</li>
+          <li className="list-item-cleannUpp">Cleann Upp</li>
+          <li className="list-item-doAustin">Do Austin</li>
+          <li className="list-item-portfolio">Portfolio</li>
+        </ul> */}
+        <div className="projects">
+          <div onClick={() => setSelectedProject('wsidt')} className={selectedProject === 'wsidt' ? 'selected' : 'list-item-wsidt'}>What Should I Do Tonight</div>
+          <div onClick={() => setSelectedProject('cherryTree')}   className={selectedProject === 'cherryTree' ? 'selected' : 'list-item-cherryTree'}>cherryTree</div>
+          <div onClick={() => setSelectedProject('cleannUpp')} className={selectedProject === 'cleannUpp' ? 'selected' : 'list-item-cleannUpp'}>Cleann Upp</div>
+          <div onClick={() => setSelectedProject('doAustin')} className={selectedProject === 'doAustin' ? 'selected' : 'list-item-doAustin'}>Do Austin</div>
+          <div onClick={() => setSelectedProject('portfolio')} className={selectedProject === 'portfolio' ? 'selected' : 'list-item-portfolio'}>Portfolio</div>
+        </div>
+        <section className="project-container">
+          <div className={selectedProject === 'wsidt' ? 'project-container-wsidt' : 'hidden'}>wsidt</div>
+          <div className={selectedProject === 'cherryTree' ? 'project-container-cherryTree' : 'hidden'}>cherrytree</div>
+          <div className={selectedProject === 'cleannUpp' ? 'project-container-cleannUpp' : 'hidden'}>cleannupp</div>
+          <div className={selectedProject === 'doAustin' ? 'project-container-doAustin' : 'hidden'}>do austin</div>
+          <div className={selectedProject === 'portfolio' ? 'project-container-portfolio' : 'hidden'}>portfolio</div>
+        </section>
       </section>
     </main>
   )

@@ -74,6 +74,7 @@
 .section-container-contact {
   width: 80%;
   margin: 0 auto;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   @include respond(phone) {
@@ -126,6 +127,13 @@
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  &:after {
+    @include respond(tab-port) {
+      content: attr(data-hover);
+      font-size: 5rem;
+    }
   }
 
   @include respond(tab-port) {

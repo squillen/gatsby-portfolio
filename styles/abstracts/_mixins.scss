@@ -22,6 +22,19 @@
   }
 }
 
+@mixin blackHover {
+  font-family: $secondary-font;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $color-black;
+  white-space: nowrap;
+  width: 0;
+  overflow: hidden;
+  line-break: unset;
+  transition: all .8s;
+}
+
 
 // MEDIA QUERY MANAGER
 /*

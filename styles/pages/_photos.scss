@@ -14,19 +14,6 @@
   font-size: 3.5rem;
 }
 
-@mixin blackHover {
-  font-family: $secondary-font;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: $color-black;
-  white-space: nowrap;
-  width: 0;
-  overflow: hidden;
-  line-break: unset;
-  transition: all 0.5s;
-}
-
 .state-options-list {
   list-style: none;
   display: flex;
