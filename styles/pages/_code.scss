@@ -20,7 +20,7 @@
   height: 100%;
   min-height: 70vh;
   list-style: none;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 0.2rem;
   font-family: $secondary-font;
 }
@@ -30,13 +30,8 @@
 }
 
 .list-item {
-  &-wsidt {
-    &:before {
-      content: "What Should I Do Tonight";
-    }
-    // &:hover + section .project-container-wsidt {
-    //   display: block;
-    // }
+  &-wsidt:before {
+    content: "What Should I Do Tonight";
   }
   &-cherryTree:before {
     content: "cherryTree"
@@ -65,6 +60,7 @@
 
 .selected {
   @include listItem;
+
   color: $color-black
 }
 
@@ -81,20 +77,15 @@
   }
 }
 
-// .list-item {
-//   &-selected {
-//     &-wsidt {
-//       @include blackHover;
-//       font-family: $primary-font;
-//     }
-//   }
-// }
-
 [class^="project-container"] {
-  height: 100%;
+  height: 50rem;
   width: 100%;
+  align-self: flex-start;
   font-size: 4rem;
-  overflow: hidden;
+  padding: 1rem;
+  * {
+    font-family: $secondary-font;
+  }
 }
 
 .project-logo {
@@ -109,50 +100,69 @@
   position: relative;
 }
 
-
-@mixin blob {
-  position: absolute;
-  z-index: -1;
-  width: 14rem;
+.tagline-container {
+  position: relative;
+  &-header {
+    font-size: 5rem;
+  }
+  margin-bottom: 3rem;
 }
 
-.section-right {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 35rem;
+.description-container {
+  font-size: 1.5rem;
+  width: 80%;
   * {
-    font-family: $secondary-font;
+    margin: 1.5rem 0;
   }
 
-  &-blob1 {
-    @include blob;
-    bottom: (calc(random(3) * -1))+rem;
-    right: 0;
-  }
-  &-blob2 {
-    @include blob;
-    bottom: -1rem;
-    left: -5rem;
-  }
-  &-blob3 {
-    @include blob;
-    bottom: random(10)+px;
-    left: -5rem;
-  }
-  &-blob4 {
-    @include blob;
-    width: 20rem;
-    bottom: -5rem;
-    left: 5rem;
-  }
-  &-blob5 {
-    @include blob;
-    bottom: 1rem;
-    left: -5rem;
+  li {
+    margin-left: 3.3rem;
   }
 
-  @include respond(phone) {
-    width: 50vw;
+  @include respond(tab-land) {
+    width: 100%;
   }
+}
+
+.description-paragraph {
+  margin: 1.6rem 0;
+}
+
+.media {
+  border-radius: 50%;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  // box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.65);
+  // -webkit-box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.65);
+  // -moz-box-shadow: 0px 10px 19px 0px rgba(0,0,0,0.65);
+  a:link {
+    text-decoration: none;
+  }
+  &-directive {
+    font-size: 0.8rem;
+  }
+  @include respond(tab-land) {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.project-logo {
+  transition: all .5s;
+  width: 20rem;
+  height: 20rem;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.blob {
+  position: absolute;
+  z-index: -1;
+  width: 18rem;
+  top: -4rem;
+  left: -3rem
 }

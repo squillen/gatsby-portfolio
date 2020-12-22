@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import DynamicHeader from "../../components/DynamicHeader"
+import ReactMarkdown from "react-markdown"
 import '../../styles/main.scss'
 import WSIDT from '../images/code/what_should_i_do_tonight.png'
 import cherryTree from '../images/code/cherryTree_logo.png'
@@ -21,6 +22,7 @@ const blobs = {
 const projects = [
   {
     src: WSIDT,
+    codeRef: 'wsidt',
     name: 'What Should I Do Tonight',
     alt: 'What Should I Do Tonight logo',
     href: 'https://whatshouldidotonight.com',
@@ -34,12 +36,17 @@ const projects = [
   {
     src: cherryTree,
     name: 'cherryTree',
+    codeRef: 'cherryTree',
     alt: 'cherryTree logo',
     href: 'https://cherryTree.cc',
     tagline: "Be more cherry'tible",
     description: [
-      'Got a celebration and want to do some good? Or maybe you just don’t need anything else right now. If so, ask people to donate in name of your celebration instead!',
-      'MERN app deployed via Azure (and Mongo Cosmos DB). Emails sent via mailgun. Payments processed with Stripe. Images hosted on AWS s3.'
+      "When I was in my teens I started sending family members emails with the charities I'd like them to donate to instead of giving me gifts. (I'm not a saint, I didn't do it every year, OK?)",
+      "I wanted them to donate for a couple of reasons:",
+      "-  I was fortunate enough to really just not need anything else \n-  Clutter is annoying\n  -  I loved the smug sense of magnanimity I got from it. Kidding.",
+      "When I got older and saw into the world of wedding registries, I again thought that I just wouldn't need all of that stuff! That's when I put two and two together and thought of making this site.",
+      "cherryTree allows people who are celebrating special occasions to ask others to donate in lieu of giving gifts.",
+      "It's a MERN app deployed via Azure (and Mongo Cosmos DB). Emails sent via mailgun. Payments processed with Stripe. Images hosted on AWS s3."
     ],
     blobName: 'blob2',
 
@@ -47,6 +54,7 @@ const projects = [
   {
     src: cleannupp,
     name: 'Cleann Upp',
+    codeRef: 'cleannUpp',
     alt: 'Cleann Upp logo',
     href: 'https://cleannupp.com',
     tagline: 'Get outside. Meet new people. Cleann Upp.',
@@ -58,49 +66,66 @@ const projects = [
   },
   {
     name: 'Do Austin',
+    codeRef: 'doAustin',
     tagline: 'Ask Alexa for stuff to do in Austin',
     description: ['Ask Alexa for stuff to do and have the event info that you’re interested in texted to you via Twilio.'],
-    blobName: 'blob4',
+    blobName: 'blob2',
 
   },
   {
     name: 'Portfolio',
-    tagline: 'Whoa! This site!',
+    codeRef: 'portfolio',
+    tagline: "Hey! It's me, this site!",
     description: ['Created with Gatsby and styled with pure CSS.'],
-    blobName: 'blob5',
+    blobName: 'blob1',
   },
 ]
 const CodePage = () => {
   const [selectedProject, setSelectedProject] = useState('wsidt')
-  console.log('selectedProject :>> ', selectedProject);
+  function handleProjectList({ codeRef, name }) {
+    return (
+      <li onClick={() => setSelectedProject(codeRef)} className={selectedProject === codeRef ? 'selected' : `list-item-${codeRef}`}>{name}</li>
+    )
+  }
+
+  function handleProjectDisplay({ href, src, alt, blobName, tagline, codeRef, description }) {
+    return (
+    <div className={selectedProject === codeRef ? `project-container-${codeRef}` : 'hidden'}>
+      <div className="tagline-container">
+        <h2 className="tagline-container-header">{tagline}</h2>
+        {blobName && <img src={blobs[blobName]} alt="blob" className='blob' />}
+      </div>
+      <div className="description-container">
+      <div className="description" style={href ? {} : { width: '70%' }}>
+          {description.map(d => <ReactMarkdown>{d}</ReactMarkdown>)}
+        </div>
+        {href && (
+          <div className="media">
+            <a href={href} rel="noreferrer" target="_blank">
+              <img className="project-logo" src={src} alt={alt}/>
+            </a>
+          </div>
+        )}  
+      </div>
+    </div>
+    )
+  }
+
   return (
     <main className="code-container">
       <DynamicHeader header="Code" headerArrowRight />
       <section className="project-section-container">
-        {/* <ul className="projects">
-          <li className="list-item-wsidt">What Should I Do Tonight</li>
-          <li className="list-item-cherryTree">cherryTree</li>
-          <li className="list-item-cleannUpp">Cleann Upp</li>
-          <li className="list-item-doAustin">Do Austin</li>
-          <li className="list-item-portfolio">Portfolio</li>
-        </ul> */}
-        <div className="projects">
-          <div onClick={() => setSelectedProject('wsidt')} className={selectedProject === 'wsidt' ? 'selected' : 'list-item-wsidt'}>What Should I Do Tonight</div>
-          <div onClick={() => setSelectedProject('cherryTree')}   className={selectedProject === 'cherryTree' ? 'selected' : 'list-item-cherryTree'}>cherryTree</div>
-          <div onClick={() => setSelectedProject('cleannUpp')} className={selectedProject === 'cleannUpp' ? 'selected' : 'list-item-cleannUpp'}>Cleann Upp</div>
-          <div onClick={() => setSelectedProject('doAustin')} className={selectedProject === 'doAustin' ? 'selected' : 'list-item-doAustin'}>Do Austin</div>
-          <div onClick={() => setSelectedProject('portfolio')} className={selectedProject === 'portfolio' ? 'selected' : 'list-item-portfolio'}>Portfolio</div>
-        </div>
+        <ul className="projects">
+          {projects.map(handleProjectList)}
+        </ul>
         <section className="project-container">
-          <div className={selectedProject === 'wsidt' ? 'project-container-wsidt' : 'hidden'}>wsidt</div>
-          <div className={selectedProject === 'cherryTree' ? 'project-container-cherryTree' : 'hidden'}>cherrytree</div>
-          <div className={selectedProject === 'cleannUpp' ? 'project-container-cleannUpp' : 'hidden'}>cleannupp</div>
-          <div className={selectedProject === 'doAustin' ? 'project-container-doAustin' : 'hidden'}>do austin</div>
-          <div className={selectedProject === 'portfolio' ? 'project-container-portfolio' : 'hidden'}>portfolio</div>
+          {projects.map(handleProjectDisplay)}
         </section>
       </section>
     </main>
   )
 }
+
+
 
 export default CodePage
