@@ -13,6 +13,41 @@
   city: Albuquerque
   description: Rustic fence inside pueblo overlooking brewing storm
 
+- image: ./photos/newMexico/blue_door_yellow_flowers.jpg
+  alt: A weathered blue door on the beautiful Canyon Road
+  city: Santa Fe
+  description: I love the way this rustic blue popped against the pale yellow flowers
+
+- image: ./photos/newMexico/colorful_pillars.jpg
+  alt: Painted pillars dripping with paint
+  city: Santa Fe
+  description: I had to wait for someone to pass by to give the photo a little more depth
+
+- image: ./photos/newMexico/face_silhouette.jpg
+  alt: A face made of several different pieces
+  city: Santa Fe
+  description: There's no way to take a bad photo with beautiful art like this.
+
+- image: ./photos/newMexico/flowers_on_wall.jpg
+  alt: A simple picture of lilacs against a adobe wall
+  city: Santa Fe
+  description: I really like the simplicity of this picture. Natures beauty against the backdrop of human's.
+
+- image: ./photos/newMexico/mailboxes.jpg
+  alt: Eight mailboxes in wall on Canyon Road
+  city: Santa Fe
+  description: I'd never seen anything like this before. The people on Canyon Road can make anything beautiful.
+
+- image: ./photos/newMexico/monk_in_window.jpg
+  alt: A walkway with pillars adorned with ristras leading to a glass door reflecting a monk walking by
+  city: Santa Fe
+  description: I waited for a couple of minutes waiting for this monk to walk by to really create the picture.
+
+- image: ./photos/newMexico/r2d2.jpg
+  alt: A spray painted R2D2 on a adobe wall
+  city: Santa Fe
+  description: I nearly walked by this without recognizing the familiar "face" on this old pueblo wall. The future meets the past.
+
 - image: ./photos/newMexico/door_into_greens.jpg
   alt: Door cut-out exposing garden from street
   city: Santa Fe
