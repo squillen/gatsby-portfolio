@@ -44,5 +44,12 @@
 
 .sub-header-container {
   @include header;
-  justify-content: flex-end;
+  &-left {
+    @include header;
+    justify-content: flex-start;
+  }
+  &-right {
+    @include header;
+    justify-content: flex-end;
+  }
 }

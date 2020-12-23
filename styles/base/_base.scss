@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-family: $primary-font;
+    font-family: $primary-font-outline;
 }
 
 html {
@@ -45,14 +45,11 @@ body {
     height: $arrow-height;
 }
 
-.description-text {
-    font-size: 8rem;
-
-    @include respond(tab-port) {
-        font-size: 5.6rem;
-    }
-    @include respond(phone) {
-        font-size: 4rem;
+.blockquote {
+    margin: 3rem;
+    * {
+        font-size: 2.5rem;
+        font-style: italic;
     }
 }
 

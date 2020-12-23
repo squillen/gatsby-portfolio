@@ -16,7 +16,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Londrina Outline`,
+          'Londrina Outline',
+          'Londrina Solid',
           'Oswald',
           `source sans pro\:300,400,400i,700`
         ],

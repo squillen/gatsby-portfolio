@@ -1,12 +1,40 @@
+.photos-page-intro {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  position: relative;
+  p {
+    font-family: $primary-font-solid;
+    font-size: 2rem;
+    margin: 1rem;
+    width: 100%;
+  }
+  a:link {
+    font-family: $primary-font-solid;
+    font-size: 2rem;
+    color: $color-black;
+  }
+  @include respond(tab-port) {
+    width: 80%
+  }
+  @include respond(phone) {
+    width: 100%
+  }
+}
+
 .toc {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
-  margin-bottom: 8rem;
+  // margin-bottom: 8rem;
   * {
-    font-family: $secondary-font;
+    font-family: $primary-font-solid;
   }
 }
 
@@ -25,16 +53,6 @@
   font-size: 2rem;
   a:link {
     text-decoration: none;
-    &:hover {
-      // height: 3rem;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // padding: 2rem 0;
-      // text-decoration: underline;
-      // background: rgba(0, 0, 0, .5);
-      // border-radius: 1rem;
-    }
   }
   li {
     margin: 1.5rem;
@@ -151,13 +169,13 @@
 .photo-caption {
   position: absolute;
   bottom: 0;
-  font-family: $secondary-font;
+  font-family: $primary-font-solid;
   background: rgbaBlack(0.5);
   color: white;
-  min-height: 4rem;
+  min-height: 4.5rem;
   width: 100%;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .prev,
@@ -204,22 +222,22 @@
 
 .close-btn {
   position: relative;
-  font-family: $primary-font;
+  font-family: $primary-font-solid;
 
   cursor: pointer;
   font-size: 4rem;
   font-weight: bold;
   z-index: 1;
-  color: $color-grey-dark-2;
+  color: $color-white;
   text-transform: uppercase;
   &:before {
     @include blackHover;
-    font-family: $primary-font;
+    font-family: $primary-font-solid;
     content: "X";
   }
   &:hover:before {
     @include blackHover;
-    font-family: $primary-font;
+    font-family: $primary-font-solid;
     width: 100%;
   }
 

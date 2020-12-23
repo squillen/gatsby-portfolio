@@ -1,4 +1,5 @@
 .about-container {
+  // @include background;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,40 +15,59 @@
 }
 
 @mixin section {
+  width: 80%;
   padding: 4rem;
-  margin-top: 6rem;
   animation: moveInBottom 1s ease-out;
-  width: 50%;
   p {
-    font-family: $secondary-font;
+    font-family: $primary-font-solid;
     font-size: 2rem;
+    margin: 0.8rem 0;
+  }
+  @include respond(tab-land) {
+    width: 100%;
   }
   @include respond(phone) {
     width: 100%;
-    padding: 1rem;
   }
 }
 
-.about-left {
+.about-info {
   @include section;
+  * {
+    font-family: $primary-font-solid;
+  }
+
+  &-section-container {
+    margin: 5rem 0;
+    padding: 1rem 2rem;
+    ul {
+      list-style: none;
+      margin-left: 3rem;
+      font-size: 2rem;
+    }
+    @include respond(phone) {
+      margin: 1rem 0;
+    }
+  }
   @include respond(phone) {
     order: 1;
+    padding: 0;
   }
 }
 
-.about-right {
-  @include section;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 0;
-  padding: 0;
-
-  .about-right-picture {
-    background: url('../../src/images/home/personal_picture.jpg') left no-repeat;
-    background-size: cover;
-    width: 30rem;
-    height: 30rem;
-    border-radius: 50%;
+.about-picture {
+  background: url('../../src/images/home/personal_picture.jpg') left no-repeat;
+  background-size: cover;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  float: right;
+  shape-outside: circle();
+  background-clip: content-box;
+  @include respond(phone) {
+    width: 100%;
+    border-radius: 0;
+    float:none;
+    margin: 0 auto;
   }
 }

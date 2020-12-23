@@ -1,8 +1,15 @@
 .index-container {
   padding: 3rem;
-  background: rgb(255,144,144);
-  background: -moz-linear-gradient(22deg, rgba(255,144,144,1) 35%, rgba(221,67,67,1) 100%);
-  background: -webkit-linear-gradient(22deg, rgba(255,144,144,1) 35%, rgba(221,67,67,1) 100%);
-  background: linear-gradient(22deg, rgba(255,144,144,1) 35%, rgba(221,67,67,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff9090",endColorstr="#dd4343",GradientType=1);
+  @include background;
+}
+
+.description-text {
+  font-size: 8rem;
+
+  @include respond(tab-port) {
+      font-size: 5.6rem;
+  }
+  @include respond(phone) {
+      font-size: 4rem;
+  }
 }

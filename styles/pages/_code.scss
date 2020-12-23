@@ -6,10 +6,10 @@
 .project-section-container {
   width: 100%;
   height: 100%;
+  padding: 5rem 0;
   min-height: 70vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   @include respond(tab-port) {
     flex-direction: column;
   }
@@ -29,9 +29,8 @@
   @include respond(tab-port) {
     min-height: 20vh;
     padding: 3rem;
-    margin-bottom: 3rem;
     li {
-      margin: 0;
+      margin: 0.5 rem;
     }
   }
 
@@ -51,6 +50,7 @@
   cursor: pointer;
   color: $color-grey-dark-2;
   text-transform: uppercase;
+  font-family: $primary-font-outline;
   position: relative;
   font-weight: 900;
 }
@@ -59,11 +59,11 @@
   @include listItem;
   &:before {
     @include blackHover;
-    font-family: $primary-font;
+    font-family: $primary-font-solid;
   }
   &:hover:before {
     @include blackHover;
-    font-family: $primary-font;
+    font-family: $primary-font-solid;
     width: 100%;
   }
 }
@@ -77,7 +77,7 @@
     &:hover:before {
       @include blackHover;
       color: $color-wsidt;
-      font-family: $primary-font;
+      font-family: $primary-font-solid;
       width: 100%;
     }
   }
@@ -89,7 +89,7 @@
     &:hover:before {
       @include blackHover;
       color: $color-cherryTree;
-      font-family: $primary-font;
+      font-family: $primary-font-solid;
       width: 100%;
     }
   }
@@ -101,7 +101,7 @@
     &:hover:before {
       @include blackHover;
       color: $color-cleannUpp;
-      font-family: $primary-font;
+      font-family: $primary-font-solid;
       width: 100%;
     }
   }
@@ -113,7 +113,7 @@
     &:hover:before {
       @include blackHover;
       color: $color-doAustin;
-      font-family: $primary-font;
+      font-family: $primary-font-solid;
       width: 100%;
     }
   }
@@ -125,56 +125,52 @@
     &:hover:before {
       @include blackHover;
       color: $color-portfolio;
-      font-family: $primary-font;
+      font-family: $primary-font-solid;
       width: 100%;
     }
   }
-
-  // &-cherryTree:before {
-  //   content: "cherryTree"
-  // }
-  // &-cleannUpp:before {
-  //   content: "Cleann Upp"
-  // }
-  // &-doAustin:before {
-  //   content: "Do Austin"
-  // }
-  // &-portfolio:before {
-  //   content: "Portfolio"
-  // }
 }
 
 .selected {
   &-wsidt {
     @include listItem;
+    font-family: $primary-font-solid;
     color: $color-wsidt;
   }
   &-cherryTree {
     @include listItem;
+    font-family: $primary-font-solid;
     color: $color-cherryTree;
   }
   &-cleannUpp {
     @include listItem;
+    font-family: $primary-font-solid;
     color: $color-cleannUpp;
   }
   &-doAustin {
     @include listItem;
+    font-family: $primary-font-solid;
     color: $color-doAustin;
   }
   &-portfolio {
     @include listItem;
+    font-family: $primary-font-solid;
     color: $color-portfolio;
   }
 }
 
 [class^="project-container"] {
-  height: 55rem;
-  width: 100%;
+  width: 90%;
+  min-height: 55rem;
   align-self: flex-start;
-  font-size: 4rem;
   padding: 1rem;
   * {
     font-family: $secondary-font;
+    font-size: 2rem;
+  }
+  @include respond(tab-port) {
+    height: auto;
+    margin: 2rem 0;
   }
 }
 
@@ -194,8 +190,9 @@
   position: relative;
   &-header {
     font-size: 5rem;
+    font-family: $primary-font-solid;
     @include respond(tab-port) {
-      font-size: 3rem;
+      font-size: 3.5rem;
     }
   }
   margin-bottom: 3rem;
@@ -203,7 +200,7 @@
 
 .description-container {
   font-size: 1.5rem;
-  width: 80%;
+  width: 90%;
   * {
     margin: 1.5rem 0;
   }
@@ -221,7 +218,7 @@
   margin: 1.6rem 0;
 }
 
-.media {
+@mixin media {
   border-radius: 50%;
   display: flex;
   width: 100%;
@@ -241,6 +238,23 @@
     align-items: center;
     justify-content: center;
   }
+}
+
+.media {
+  &-desktop {
+    @include media;
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+  &-mobile {
+    @include media;
+    display: none;
+    @include respond(tab-port) {
+      display: flex;
+    }
+  }
+
 }
 
 .project-logo {

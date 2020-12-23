@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import arrow from '../images/svgs/arrows/straight-arrow-outline-white.svg'
 import DynamicHeader from "../../components/DynamicHeader"
 import Modal from "../../components/Modal"
+import blob from '../images/svgs/blobs/blob2.svg'
 import '../../styles/main.scss'
 
 const PhotosPage = ({ data }) => {
@@ -51,8 +52,21 @@ const PhotosPage = ({ data }) => {
   return (
     <main className="photos-page-container">
       <DynamicHeader header="Photos" id="home" headerArrowRight />
+      <section className="photos-page-intro">
+        {<img src={blob} alt="blob" className='blob' />}
+        <p>
+          I got into photography at the beginning of the pandemic. (Isn&apos;t it weird how we're so casual about a &quot;pandemic&quot; now?)
+        </p>
+        <p>
+          I fell in love with it almost immediately because it&apos;s so fun and approachable. It gives you a way to be artistic without actually being artistic. At my novice level, at least. No shade intended. 😅
+        </p>
+        <p>I have a <a target="_blank" href="https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d7500.html">Nikon D7500</a> and shoot primarily with my <a target="_blank" href="https://www.nikonusa.com/en/nikon-products/product/camera-lenses/af-s-nikkor-50mm-f1.4g.html">AF-S fixed Nikon 50mm F1.4G</a> lens.</p>
+        <p>
+          For even more photos, check out my <a href="https://unsplash.com/@squillen" target="_blank">Unsplash</a> page.
+        </p>
+      </section> 
       <section className="toc">
-        <h3 className="toc-header">Locations:</h3>
+        <h3 className="toc-header">locations:</h3>
         <ul className="state-options-list">
           <Link to="#New Mexico"><li className="list-item-newMexico">New Mexico</li></Link>
           <Link to="#Texas"><li className="list-item-texas">Texas</li></Link>

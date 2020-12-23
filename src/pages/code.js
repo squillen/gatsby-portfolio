@@ -26,10 +26,11 @@ const projects = [
     name: 'What Should I Do Tonight',
     alt: 'What Should I Do Tonight logo',
     href: 'https://whatshouldidotonight.com',
-    tagline: 'Stop searching. Start doing.',
+    tagline: 'A good night in a site.',
     description: [
-      "A site designed for nights. Get genuinely good ideas for things you can do right now. Find hidden gem shows, the best sites to learn how to code and cook, and novel ideas about how to make the most of your night.",
-      "Next.js app deployed via Vercel. State managed with Redux. Mongo Atlas database. Contact emails sent via Nodemailer. Images hosted on AWS s3."
+      "The site designed for nights. I got the idea after doing a web search for things to do that night before going to my girlfriend's house. There were a couple of scattered results and none of them good, so I thought I'd make one of my own!",
+      "It originally started as a random idea generator but, to appease the Google Gods, I decided to make it into more of a mainstream site with articles, reviews, and ideas, all centered around making peoples' nights better.",
+      "It's a Next.js app deployed via Vercel. State managed with Redux. Mongo Atlas database. Contact emails sent via Nodemailer. Images hosted on AWS s3."
     ],
     blobName: 'blob1',
   },
@@ -41,11 +42,11 @@ const projects = [
     href: 'https://cherryTree.cc',
     tagline: "Be more cherry'tible",
     description: [
-      "When I was in my teens I started sending family members emails with the charities I'd like them to donate to instead of giving me gifts. (I'm not a saint, I didn't do it every year, OK?)",
+      "cherryTree is a site that allows people who are celebrating special occasions to ask others to donate to charities in lieu of giving them gifts.",
+      "When I was in my teens I started sending family members emails with the charities I'd like them to donate to instead of giving me gifts for Christmas. But before I sound too self-congratulatory, let me say that I didn't do it every Christmas, just a couple. 😅",
       "I wanted them to donate for a couple of reasons:",
-      "-  I was fortunate enough to really just not need anything else. \n-  Clutter is annoying. \n  -  I lived off of the smug sense of magnanimity I got from it. Kidding.",
+      "-  I was fortunate enough to really just not need anything else. \n-  Clutter is annoying. \n  -  I lived for the smug sense of magnanimity I got from it. Kidding.",
       "When I got older and saw into the world of wedding registries, I again thought that I just wouldn't need all of that stuff! That's when I put two and two together and thought of making this site.",
-      "cherryTree allows people who are celebrating special occasions to ask others to donate in lieu of giving gifts.",
       "It's a MERN app deployed via Azure (and Mongo Cosmos DB). Emails sent via mailgun. Payments processed with Stripe. Images hosted on AWS s3."
     ],
     blobName: 'blob2',
@@ -59,25 +60,32 @@ const projects = [
     href: 'https://cleannupp.com',
     tagline: 'Get outside. Meet new people. Cleann Upp.',
     description: [
-      'Do the activities you’d normally do (or maybe some you wouldn’t normally do!) but bring/meet a couple of friends and trash bags and get some karma out of it!',
-      'MERN app deployed via Azure (and Mongo Cosmos DB). Images hosted on AWS s3 and AWS Cloudfront.'
+      "Like a lot of people, I like to get out in nature and hike. You might understand, then, the frustration and sadness that comes from seeing trash in an otherwise gorgeous setting. It instantly takes you out of them moment and reminds you of our negative impact on the world.",
+      "So, to help, I started bringing trash bags with me and filling them up. People would comment about how it was a good, noble idea, so I then thought that others might enjoy doing the same thing. And, voila, Clean Up was born! Then, when I realized Clean Up was taken, voila! Cleann Upp was born! 😉",
+      'The idea is simple: do the activities you’d normally do (or maybe some you wouldn’t normally do!) but bring some trash bags and some friends (or meet some there) and get some karma out of it!',
+      "It's MERN app deployed via Azure (and Mongo Cosmos DB). Images hosted on AWS s3 and AWS Cloudfront.",
     ],
     blobName: 'blob3',
   },
   {
     name: 'Do Austin',
     codeRef: 'doAustin',
-    tagline: 'Ask Alexa for stuff to do in Austin',
-    description: ['Ask Alexa for stuff to do and have the event info that you’re interested in texted to you via Twilio.'],
-    blobName: 'blob2',
-
+    tagline: "Alexa, what's going on in Austin tonight?",
+    description: [
+      "If you haven't heard, Austin is a pretty cool city. It's got so much going on, though, that a person could easily miss most of it! To help keep on top of it, I use the site [do512](https://do512.com/), which I thought I could also use as a fun way to learn how to create Alexa apps.",
+      "You can ask her things like: \"Hey Alexa, ask Do Austin for some free things going on tomorrow night.\" She'll then reply with a list of things to do. If you're interested in a particular event, she can text you more details via Twilio.",
+    ],
+    blobName: 'blob4',
   },
   {
     name: 'Portfolio',
     codeRef: 'portfolio',
     tagline: "Hey! It's me, this site!",
-    description: ['Created with Gatsby and styled with pure CSS.'],
-    blobName: 'blob1',
+    description: [
+      "This site was created with Gatsby and pure css.",
+      "I feel like I need to say more. It was also made with ❤️"
+    ],
+    blobName: 'blob5',
   },
 ]
 const CodePage = () => {
@@ -91,6 +99,13 @@ const CodePage = () => {
   function handleProjectDisplay({ href, src, alt, blobName, tagline, codeRef, description }) {
     return (
     <div className={selectedProject === codeRef ? `project-container-${codeRef}` : 'hidden'}>
+      {href && (
+        <div className="media-mobile">
+          <a href={href} rel="noreferrer" target="_blank">
+            <img className="project-logo" src={src} alt={alt}/>
+          </a>
+        </div>
+      )}  
       <div className="tagline-container">
         <h2 className="tagline-container-header">{tagline}</h2>
         {blobName && <img src={blobs[blobName]} alt="blob" className='blob' />}
@@ -100,7 +115,7 @@ const CodePage = () => {
           {description.map(d => <ReactMarkdown>{d}</ReactMarkdown>)}
         </div>
         {href && (
-          <div className="media">
+          <div className="media-desktop">
             <a href={href} rel="noreferrer" target="_blank">
               <img className="project-logo" src={src} alt={alt}/>
             </a>
