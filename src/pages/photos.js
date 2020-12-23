@@ -32,7 +32,6 @@ const PhotosPage = ({ data }) => {
     <div className="image-carousel">
       <div className="close-btn-container">
         <div className="close-btn" onClick={() => setImageIndex(-1)}>X</div>
-
       </div>
       <div className="prev" onClick={() => scrollImages(-1)}><img src={arrow} className="button-arrow" /></div>
       <figure className="carousel-photo">

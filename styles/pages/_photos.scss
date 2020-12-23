@@ -26,6 +26,35 @@
   }
 }
 
+.close-btn-container {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  transition: all 1s;
+}
+
+.close-btn {
+  opacity: 0;
+  position: relative;
+  font-family: $primary-font-solid;
+  cursor: pointer;
+  font-size: 4rem;
+  font-weight: bold;
+  z-index: 1;
+  color: $color-white;
+  text-transform: uppercase;
+  &:before {
+    @include blackHover;
+    font-family: $primary-font-solid;
+    content: "X";
+  }
+  &:hover:before {
+    @include blackHover;
+    font-family: $primary-font-solid;
+    width: 100%;
+  }
+}
+
 .toc {
   display: flex;
   flex-direction: column;
@@ -158,7 +187,15 @@
   display: flex;
   align-items: center;
   position: relative;
+
+  &:hover {
+    .prev, .next, .close-btn, .photo-caption {
+      transition: all 1s;
+      opacity: 1;
+    }
+  }
 }
+
 
 .carousel-photo {
   width: 100%;
@@ -167,6 +204,7 @@
 }
 
 .photo-caption {
+  opacity: 0;
   position: absolute;
   bottom: 0;
   font-family: $primary-font-solid;
@@ -180,6 +218,7 @@
 
 .prev,
 .next {
+  opacity: 0;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -212,39 +251,4 @@
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-}
-
-.close-btn-container {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-}
-
-.close-btn {
-  position: relative;
-  font-family: $primary-font-solid;
-
-  cursor: pointer;
-  font-size: 4rem;
-  font-weight: bold;
-  z-index: 1;
-  color: $color-white;
-  text-transform: uppercase;
-  &:before {
-    @include blackHover;
-    font-family: $primary-font-solid;
-    content: "X";
-  }
-  &:hover:before {
-    @include blackHover;
-    font-family: $primary-font-solid;
-    width: 100%;
-  }
-
-
-  // &:hover
-  // &:focus {
-  //   color: #999;
-  //   text-decoration: none;
-  // }
 }
