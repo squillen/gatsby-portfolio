@@ -192,8 +192,9 @@
 
   &-header {
     opacity: 0;
+    width: 100%;
     position: absolute;
-    left: 45%;
+    text-align: center;
     top: 0;
     z-index: 1;
     font-size: 5rem;
