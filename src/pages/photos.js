@@ -27,9 +27,19 @@ const PhotosPage = ({ data }) => {
       else setImageIndex(imageIndex + 1)
     }
   }
+
+  const handleKeyDown = (e) => {
+    const event = window.event || e
+    console.log('event :>> ', event);
+    const { keyCode } = event || {}
+    if (keyCode === 37) scrollImages(-1)
+    else if (keyCode === 39) scrollImages(1)
+  }
+
   const currentImage = imageIndex >= 0 && imageSet[imageIndex].node
   const content = currentImage && (
     <div className="image-carousel">
+      <div className="image-carousel-header">{currentHeader}</div>
       <div className="close-btn-container">
         <div className="close-btn" onClick={() => setImageIndex(-1)}>X</div>
       </div>
@@ -49,7 +59,7 @@ const PhotosPage = ({ data }) => {
   )
 
   return (
-    <main className="photos-page-container">
+    <main className="photos-page-container" onKeyDown={handleKeyDown}>
       <DynamicHeader header="Photos" id="home" headerArrowRight />
       <section className="photos-page-intro">
         {<img src={blob} alt="blob" className='blob' />}
@@ -67,11 +77,14 @@ const PhotosPage = ({ data }) => {
       <section className="toc">
         <h3 className="toc-header">locations:</h3>
         <ul className="state-options-list">
+          <Link to="#Maine"><li className="list-item-maine">Maine</li></Link>
           <Link to="#New Mexico"><li className="list-item-newMexico">New Mexico</li></Link>
           <Link to="#Texas"><li className="list-item-texas">Texas</li></Link>
-          {/* <Link to="#Texas"><li className="list-item-florida">Florida</li></Link> */}
         </ul>
       </section>
+      {/* MAINE PHOTOS */}
+      {handleDisplay(data.maine, 'Maine')}
+      
       {/* NM PHOTOS */}
       {handleDisplay(data.newMexico, 'New Mexico')}
 
@@ -80,7 +93,7 @@ const PhotosPage = ({ data }) => {
       <Modal
         content={content}
         displayModal={imageIndex >= 0}
-        header={currentHeader}
+        handleKeyDown={handleKeyDown}
       />
     </main>
   )
@@ -108,6 +121,24 @@ export const query = graphql`
     }
 
     newMexico: allNewMexicoPhotosYaml {
+      edges {
+        node {
+          alt
+          description
+          city
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          id
+        }
+      }
+    }
+
+    maine: allMainePhotosYaml {
       edges {
         node {
           alt

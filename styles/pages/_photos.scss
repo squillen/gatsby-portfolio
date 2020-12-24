@@ -1,5 +1,5 @@
 .photos-page-intro {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,6 @@
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
-  // margin-bottom: 8rem;
   * {
     font-family: $primary-font-solid;
   }
@@ -107,6 +106,9 @@
   }
   &-florida:before {
     content: "Florida"
+  }
+  &-maine:before {
+    content: "Maine"
   }
   &-texas:before {
     content: "Texas"
@@ -188,8 +190,18 @@
   align-items: center;
   position: relative;
 
+  &-header {
+    opacity: 0;
+    position: absolute;
+    left: 45%;
+    top: 0;
+    z-index: 1;
+    font-size: 5rem;
+    font-weight: 700;
+  }
+
   &:hover {
-    .prev, .next, .close-btn, .photo-caption {
+    .prev, .next, .close-btn, .photo-caption, .image-carousel-header {
       transition: all 1s;
       opacity: 1;
     }
