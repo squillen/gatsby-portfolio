@@ -98,3 +98,28 @@
   city: Albuquerque
   description: A rooftop bar at sunset
 
+- image: ./photos/newMexico/rug_house.jpg
+  alt: An old rug shop in Old Towne Albuquerque
+  city: Albuquerque
+  description: I love the patina of this old building.
+
+- image: ./photos/newMexico/sky_chapel.jpg
+  alt: An old church in the middle of nowhere New Mexico
+  city: Somewhere in New Mexico
+  description: We were driving in the middle of nowhere New Mexico when we saw this little church and just had to stop. There was a cemetary in front and no one else in sight.
+
+- image: ./photos/newMexico/stormy_pueblo.jpg
+  alt: A pueblo with a dark storm brewing behind it
+  city: Somewhere in Albuquerque
+  description: Racing to see this pueblo before the storm ran through, it proved for a gorgeous backdrop
+
+- image: ./photos/newMexico/sunset_through_window.jpg
+  alt: A sunset through a window
+  city: Albuquerque
+  description: We weren't able to get a seat outside for this gorgeous sunset so I had to make due with what we had...
+
+- image: ./photos/newMexico/window_with_flowers.jpg
+  alt: A yet-to-bloom sunflower against an adobe wall
+  city: Santa Fe
+  description: Simple beauty at its best.
+

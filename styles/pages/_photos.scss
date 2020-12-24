@@ -98,17 +98,14 @@
 }
 
 .list-item {
-  &-newMexico:before {
-    content: "New Mexico";
-  }
-  &-texas:before {
-    content: "Texas"
-  }
-  &-florida:before {
-    content: "Florida"
-  }
   &-maine:before {
     content: "Maine"
+  }
+  &-arizona:before {
+    content: "Arizona"
+  }
+  &-newMexico:before {
+    content: "New Mexico";
   }
   &-texas:before {
     content: "Texas"

@@ -28,6 +28,16 @@
   city: Austin
   description: Foster dog Coop
 
+- image: ./photos/texas/cotton-eyed-pam.jpg
+  alt: My girlfriend Pam sitting in a field of cotton
+  city: Somewhere in Texas
+  description: On the drive back from New Mexico, we found this cotton field and decided to take a couple of shots.
+
+- image: ./photos/texas/cotton-eyed-pam.jpg
+  alt: Wind turbines in the sunset
+  city: Somewhere in Texas
+  description: A little later on during the drive back from New Mexico, the sunset provided a gorgeous back drop to a sea of wind turbines.
+
 - image: ./photos/texas/couple_biking.jpg
   alt: couple biking on bridge
   city: Austin

@@ -77,11 +77,15 @@ const PhotosPage = ({ data }) => {
       <section className="toc">
         <h3 className="toc-header">locations:</h3>
         <ul className="state-options-list">
+          <Link to="#Arizona"><li className="list-item-arizona">Arizona</li></Link>
           <Link to="#Maine"><li className="list-item-maine">Maine</li></Link>
           <Link to="#New Mexico"><li className="list-item-newMexico">New Mexico</li></Link>
           <Link to="#Texas"><li className="list-item-texas">Texas</li></Link>
         </ul>
       </section>
+      {/* MAINE PHOTOS */}
+      {handleDisplay(data.arizona, 'Arizona')}
+
       {/* MAINE PHOTOS */}
       {handleDisplay(data.maine, 'Maine')}
       
@@ -139,6 +143,24 @@ export const query = graphql`
     }
 
     maine: allMainePhotosYaml {
+      edges {
+        node {
+          alt
+          description
+          city
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          id
+        }
+      }
+    }
+
+    arizona: allArizonaPhotosYaml {
       edges {
         node {
           alt
