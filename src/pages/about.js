@@ -12,7 +12,6 @@ const AboutPage = () => {
         <div className="about-picture" />
         <div className="about-info-section-container">
           <p>I&apos;m a web developer living in Austin, TX.</p>
-          <p>If given the choice, I will choose enchiladas and margaritas. Always.</p>
         </div>
         <div className="about-info-section-container">
           <p>Currently, I like to:</p>
@@ -29,6 +28,9 @@ const AboutPage = () => {
             <li>- Figure out time travel. So far I&apos;ve only figured out how to go forward. Halfway there!</li>
             <li>- Connect with people on a deeper level.</li>
           </ul>
+        </div>
+        <div className="about-info-section-container">
+          <p>If given the choice, I will choose enchiladas and margaritas. Always.</p>
         </div>
         <div className="about-info-section-container">
           <p>If I had <FaInstagram /> or <FaTwitter /> , this is where&apos;d I&apos;d put them.</p>
