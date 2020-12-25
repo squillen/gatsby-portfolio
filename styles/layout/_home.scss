@@ -129,12 +129,12 @@
     transform: scale(1.1);
   }
 
-  &:after {
-    @include respond(tab-port) {
-      content: attr(data-hover);
-      font-size: 5rem;
-    }
-  }
+  // &:after:not(:first-child) {
+  //   @include respond(tab-port) {
+  //     content: attr(data-hover);
+  //     font-size: 5rem;
+  //   }
+  // }
 
   @include respond(tab-port) {
     width: 20rem;
@@ -165,6 +165,12 @@
 }
 
 .section-block-code {
+  &:after {
+    @include respond(tab-port) {
+      content: attr(data-hover);
+      font-size: 5rem;
+    }
+  }
   @include setBackground("../../src/images/home/old_mac.jpg", right);
   a:link {
     text-decoration: none;
@@ -172,6 +178,12 @@
 }
 
 .section-block-photos {
+  &:after {
+    @include respond(tab-port) {
+      content: attr(data-hover);
+      font-size: 5rem;
+    }
+  }
   @include setBackground("../../src/images/home/sedona_dog.jpg", right);
   @include respond(phone) {
     margin-top: 3rem;
