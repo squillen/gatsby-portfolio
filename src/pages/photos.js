@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import DefaultHelmet from "../../components/DefaultHelmet"
 import { Link, graphql } from "gatsby"
 import { FaChevronUp } from 'react-icons/fa'
 import Img from "gatsby-image"
@@ -60,6 +61,10 @@ const PhotosPage = ({ data }) => {
 
   return (
     <main className="photos-page-container" onKeyDown={handleKeyDown}>
+      <DefaultHelmet
+        title="Photos - Sean Quillen"
+        description="Some photos I've taken since March 2020."
+      />
       <DynamicHeader header="Photos" id="home" headerArrowRight />
       <section className="photos-page-intro">
         {<img src={blob} alt="blob" className='blob' />}

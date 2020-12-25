@@ -1,6 +1,7 @@
 import React, { useState } from "react"
-import DynamicHeader from "../../components/DynamicHeader"
 import ReactMarkdown from "react-markdown"
+import DefaultHelmet from "../../components/DefaultHelmet"
+import DynamicHeader from "../../components/DynamicHeader"
 import '../../styles/main.scss'
 import WSIDT from '../images/code/what_should_i_do_tonight.png'
 import cherryTree from '../images/code/cherryTree_logo.png'
@@ -128,6 +129,10 @@ const CodePage = () => {
 
   return (
     <main className="code-container">
+      <DefaultHelmet
+        title="Code - Sean Quillen"
+        description="I've created a couple of sites, including whatshouldidotonight.com, cherrytree.cc, and cleannupp.com."
+      />
       <DynamicHeader header="Code" headerArrowRight />
       <section className="project-section-container">
         <ul className="projects">
