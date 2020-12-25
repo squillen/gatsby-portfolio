@@ -179,6 +179,9 @@
       content: attr(data-hover);
       font-size: 5rem;
     }
+    @include respond(phone) {
+      transform: none;
+    }
   }
 } 
 
