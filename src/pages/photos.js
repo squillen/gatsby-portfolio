@@ -21,7 +21,7 @@ const PhotosPage = ({ data }) => {
   const handleDisplay = (data, header) => displayPhotos(data, header, setSelectedImageInfo)
   const scrollImages = (direction) => {
     if (direction < 0) {
-      if (imageIndex > 1) setImageIndex(imageIndex - 1)
+      if (imageIndex >= 1) setImageIndex(imageIndex - 1)
       else setImageIndex(imageSet.length - 1)
     } else {
       if (imageIndex >= imageSet.length - 1) setImageIndex(0)
