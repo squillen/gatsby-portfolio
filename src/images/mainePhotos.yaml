@@ -1,7 +1,7 @@
 - image: ./photos/maine/bar_harbor_sunrise.jpg
   alt: Couple sitting together watching sunset 
   city: Acadia National Park
-  description: We went up to Cadillac Mountain for this sunrise but had to leave when it was nothing but fog (and freezing!). On the way back down, we found this spot, and apparently so did this couple.
+  description: We went up to Cadillac Mountain for this sunrise but had to leave when it was nothing but fog (and freezing!). On the way back down we found this spot, and apparently so did this couple.
 
 - image: ./photos/maine/bike_on_boardwalk.jpg
   alt: A quaint looking bike with a basket leaning against a picnic table with a boardwalk in the background 
@@ -11,12 +11,12 @@
 - image: ./photos/maine/bike_on_boardwalk_bw.jpg
   alt: A quaint looking bike with a basket leaning against a picnic table with a boardwalk in the background
   city: Boothbay Harbor
-  description: I appreciated the simpleness of this photo in black and white that I included it in addition to the colorized version.
+  description: There's something about a bike with a basket that it just feels right in black and white.
 
 - image: ./photos/maine/birdhouses.jpg
   alt: Hundreds of rustic bird houses piled onto each other.
   city: Bar Harbor
-  description: This sea of birdhouses was tucked away in the back of a Bar Harbor store. It was a really cool scene but also a carnage of trees!
+  description: This sea of birdhouses was tucked away in the back of a Bar Harbor store. It was a really cool scene but also an absolute carnage of trees! 😅
 
 - image: ./photos/maine/boat_anchor.jpg
   alt: A shot focused on half of a boat anchor with a boat blurred in the background 
@@ -26,16 +26,16 @@
 - image: ./photos/maine/boats_through_fence.jpg
   alt: Boats soft focused through fence 
   city: Boothbay Harbor
-  description: Boats. With a fence.
+  description: Just some boats behind a fence. In light of the last picture, I'll call this one, "Boats, tethered." 😉
 
 - image: ./photos/maine/crab_traps_on_rocks.jpg
   alt:  Washed up crab traps sitting on some rocks
   city: Bar Harbor
-  description: Crab/lobster traps were everywhere in Bar Harbor. These had washed ashore and were seemingly trash, but still beautiful.
+  description: Crab/lobster traps were everywhere in Bar Harbor. These had washed ashore and were seemingly trash, but beautiful nonetheless!
 
 - image: ./photos/maine/flower-stand.jpg
   alt: A bicyclist zooms by a little stand selling freshly cut flowers
-  city: Heading North on the 1
+  city: Heading North on the 1. Maybe.
   description: This little stand on the side of the road was selling freshly cut flowers. Maine is a very quaint place.
 
 - image: ./photos/maine/harbor.jpg
@@ -46,12 +46,12 @@
 - image: ./photos/maine/lake_with_boats.jpg
   alt: Boats in the bay with a cloudy, foggy backdrop 
   city: Bar Harbor
-  description: We turned the corner and saw this beautiful sight and just had to pull over. You can see a couple of chairs towards the water where some lucky people get to enjoy the serene view.
+  description: We turned the corner on the road and were greeted with this beautiful sight. You can see a couple of chairs towards the water where some lucky people apparently get to enjoy the serene view on the regular.
 
 - image: ./photos/maine/lights_and_flowers.jpg
   alt: A blurred background of a string of lights and a box of flowers with the focus on a single candescent bulb 
   city: Portland
-  description: Artsy. A cobbled street in Portland was like stepping back in time.
+  description: So artsy part deux. A lot of Portland felt like you were stepping back in time, but this cobbled street especially.
 
 - image: ./photos/maine/man_smoking_by_harbor.jpg
   alt: A man sits smoking on his work break in front a fisherman's wharf.
@@ -75,6 +75,6 @@
 
 - image: ./photos/maine/squirrel_in_tree.jpg
   alt: A squirrel eats a pinecone in a big, needle-y pine tree
-  city: Bar Harbor
+  city: Acadia National Park
   description: I saw this little guy and was quick enough to capture of couple of shots before he scurried away.
 

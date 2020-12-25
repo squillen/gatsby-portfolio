@@ -1,42 +1,42 @@
 - image: ./photos/texas/austin_skyline.jpg
   alt: Austin Skyline
   city: Austin
-  description: Austin skyline on a beautiful sunny day
+  description: Austin might not be the biggest city, but it's a (mostly) lovely one.
 
 - image: ./photos/texas/birds_playing.jpg
   alt: Birds playing in old birdhouse
   city: Austin
-  description: Birds playing in an old birdhouse. I had to race to find my camera, change lenses, and snap this before they left!
+  description: I had to race to find my camera, change lenses, and snap this before they left! Unfortunately, this is a rare sight.
 
 - image: ./photos/texas/buick_grill.jpg
   alt: A Buick with a bad-ass rat emblem
-  city: Bastrop
-  description: A Buick with a bad-ass rat emblem
+  city: Lockhart
+  description: I would never think to put a rat as my emblem, but it works here!
 
 - image: ./photos/texas/building_side_exit.jpg
   alt: Door on side of building with staircase down
-  city: Bastrop
-  description: A door on the second floor
+  city: Lockhart
+  description: Gotta love simple, old, beautiful design like this.
 
 - image: ./photos/texas/butterfly_on_flower.jpg
   alt: Butterfly on flower
   city: Austin
-  description: Butterfly on flower
+  description: Cliche, must-have photo on a butterfly on a flower ✅
 
 - image: ./photos/texas/coopcoop.jpg
-  alt: Coop Coop
+  alt: A happy dog with its tongue out
   city: Austin
-  description: Foster dog Coop
+  description: Foster dog Coop being goofy and handsome as ever
 
 - image: ./photos/texas/cotton-eyed-pam.jpg
-  alt: My girlfriend Pam sitting in a field of cotton
-  city: Somewhere in Texas
-  description: On the drive back from New Mexico, we found this cotton field and decided to take a couple of shots.
+  alt: Woman sitting in a field of cotton
+  city: Somewhere
+  description: An instagrammer's heaven
 
 - image: ./photos/texas/turbine_sunset.jpg
   alt: Wind turbines in the sunset
   city: Somewhere in Texas
-  description: A little later on during the drive back from New Mexico, the sunset provided a gorgeous back drop to a sea of wind turbines.
+  description: During the drive back from New Mexico, the sunset provided a gorgeous backdrop to a sea of wind turbines. Texas, surprisingly, has a ton of wind turbines out west.
 
 - image: ./photos/texas/couple_biking.jpg
   alt: couple biking on bridge
@@ -51,24 +51,24 @@
 - image: ./photos/texas/guy_fishing.jpg
   alt: Close up on guy's fishing gear and his legs
   city: Austin
-  description: Close up on guy's fishing gear and his legs
+  description: I wanted to get this guy fishing but wanted something a little more unique, so I figured I'd focus on his gear instead.
 
 - image: ./photos/texas/jets.jpg
-  alt: Jets flying over austin
+  alt: Thunderbird jets flying over Austin
   city: Austin
-  description: Jets flying over Austin
+  description: Thunderbird jets flying over Austin as part of the response to bolstering community morale during the height of the pandemic.
 
 - image: ./photos/texas/lamp_in_sky.jpg
   alt: Lamp in sky at night
   city: Austin
-  description: Lamp in sky at night
+  description: Just a retail parking lot light against a dimming night sky.
 
 - image: ./photos/texas/mindy.jpg
   alt: Old poodle peaking from behind tree
   city: Austin
-  description: Old poodle peaking from behind tree
+  description: This old, gentle poodle was busy investigating a new lawn and popped out to say hi.
 
 - image: ./photos/texas/pammy_lady_bird.jpg
   alt: Girl in front of Lady Bird Lake
   city: Austin
-  description: My beautiful girlfriend standing in front of Lady Bird Lake
+  description: My beautiful girlfriend standing in front of Lady Bird Lake.

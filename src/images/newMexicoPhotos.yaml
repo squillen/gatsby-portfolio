@@ -1,117 +1,117 @@
 - image: ./photos/newMexico/adobe.jpg
   alt: Adobe door looking onto mountains
-  city: Albuquerque
-  description: Adobe door looking onto mountains
+  city: Pecos National Park
+  description: Not a bad view these people had
 
 - image: ./photos/newMexico/birds_on_wire.jpg
-  alt: Birds on wire in Albuquerque Old Towne
-  city: Albuquerque
-  description: Birds on wire in Albuquerque Old Towne
+  alt: Birds on wire in Albuquerque Old Town
+  city: Old Town, Albuquerque
+  description: Three (plus 1) Little Birds
   
 - image: ./photos/newMexico/brooding_fence.jpg
   alt: Rustic fence inside pueblo overlooking brewing storm
-  city: Albuquerque
-  description: Rustic fence inside pueblo overlooking brewing storm
+  city: Pecos National Park
+  description: Controlled elements overlooking uncontrolled elements. So deep.
 
 - image: ./photos/newMexico/blue_door_yellow_flowers.jpg
   alt: A weathered blue door on the beautiful Canyon Road
-  city: Santa Fe
-  description: I love the way this rustic blue popped against the pale yellow flowers
+  city: Canyon Road, Santa Fe
+  description: I love the way this rustic blue popped against the pale yellow flowers.
 
 - image: ./photos/newMexico/colorful_pillars.jpg
   alt: Painted pillars dripping with paint
-  city: Santa Fe
+  city: Downtown, Santa Fe
   description: I waited for someone to pass by to give the photo a little more depth. I love the artsy-ness of Santa Fe, definitely one of my favorite cities that I've been to.
 
 - image: ./photos/newMexico/face_silhouette.jpg
   alt: A face made of several different pieces
-  city: Santa Fe
+  city: Canyon Road, Santa Fe
   description: There's no way to take a bad photo with beautiful art like this.
 
 - image: ./photos/newMexico/flowers_on_wall.jpg
   alt: A simple picture of lilacs against a adobe wall
-  city: Santa Fe
-  description: I really like the simplicity of this picture. Natures beauty against the backdrop of human's.
+  city: Canyon Road, Santa Fe
+  description: I really like the simplicity of this picture. One of natures' beauties against one of humans' (the adobe wall).
 
 - image: ./photos/newMexico/mailboxes.jpg
   alt: Eight mailboxes in wall on Canyon Road
-  city: Santa Fe
+  city: Canyon Road, Santa Fe
   description: I'd never seen anything like this before. The people on Canyon Road can make anything beautiful.
 
 - image: ./photos/newMexico/monk_in_window.jpg
   alt: A walkway with pillars adorned with ristras leading to a glass door reflecting a monk walking by
-  city: Santa Fe
-  description: I waited for a couple of minutes waiting for this monk to walk by to really create the picture.
+  city: Canyon Road, Santa Fe
+  description: I waited for a couple of minutes for this monk to walk by to help add more depth to this picture. Thanks, dude.
 
 - image: ./photos/newMexico/r2d2.jpg
   alt: A spray painted R2D2 on a adobe wall
-  city: Santa Fe
+  city: Canyon Road, Santa Fe
   description: I nearly walked by this without recognizing the familiar "face" on this old pueblo wall. The future meets the past.
 
 - image: ./photos/newMexico/door_into_greens.jpg
   alt: Door cut-out exposing garden from street
-  city: Santa Fe
-  description: Door cut-out exposing garden from street
+  city: Canyon Road, Santa Fe
+  description: It's the little touches on Canyon Road that make it so special.
 
 - image: ./photos/newMexico/face_and_window.jpg
   alt: Head sculpture sitting next to red window frame outside art store
-  city: Santa Fe
-  description: Head sculpture sitting next to red window frame outside art store
+  city: Canyon Road, Santa Fe
+  description: The talented people on Canyon Road help make any picture look good.
 
 - image: ./photos/newMexico/fire_hydrant.jpg
   alt: fire hydrant with sunflower growing behind on Santa Fe street
-  city: Santa Fe
-  description: fire hydrant with sunflower growing behind on Santa Fe street
+  city: Canyon Road, Santa Fe
+  description: I loved how this sunflower looks like it grew right out of the fire hydrant.
 
 - image: ./photos/newMexico/fords_in_abq.jpg
-  alt: Two old Ford owners talking in front of Albuquerque Old Towne park
+  alt: Two old Ford owners talking in front of Albuquerque Old Town park
   city: Albuquerque
-  description: Two old Ford owners talking in front of Albuquerque Old Towne park
+  description: These two Ford owners didn't seem to know each other, more like they were just appreciating each other's lovely, old cars.
 
 - image: ./photos/newMexico/mill_sky.jpg
-  alt: One of many grain mills passed on a small New Mexican road
+  alt: A grain mill set against a bright blue sky
   city: Somewhere
-  description: One of many grain mills passed on a small New Mexican road
+  description: One of many grain mills (?) we passed somewhere on the road from Santa Fe back to Austin.
 
 - image: ./photos/newMexico/NM_squirrel.jpg
   alt: squirrel at Bandelier National Monument
   city: Bandelier National Monument
-  description: squirrel at Bandelier National Monument
+  description: This little guy with the crazy ears was oblivious to us, too busy digging for something.
 
 - image: ./photos/newMexico/pueblo_pammy.jpg
-  alt: Pam in the entrance of a pueblo just outside of Albuquerque and a looming storm
-  city: Albuquerque
-  description: Pam in the entrance of a pueblo just outside of Albuquerque and a looming storm
+  alt: Woman in the entrance of a pueblo just outside of Santa Fe with a looming storm in the background
+  city: Pecos National Park
+  description: It really was this ominous looking.
 
 - image: ./photos/newMexico/pueblo_wall.jpg
   alt: A wall of a pueblo with long shadows cast from the supporting wooden beams
-  city: Albuquerque
-  description: A wall of a pueblo with long shadows cast from the supporting wooden beams
+  city: Pecos National Park
+  description: I guess these pillars were for support (and probably to hang things) but they were also really gorgeous, especially with the shadows they cast.
 
 - image: ./photos/newMexico/red_window.jpg
   alt: A solitary window to nowhere
-  city: Albuquerque
-  description: This window doesn't seem to have much of a purpose beyond looking nice, which is does quite well, I think.
+  city: Old Town, Albuquerque
+  description: This window doesn't honestly seem to have much of a purpose beyond looking nice. Luckily, it does quite well, I think.
 
 - image: ./photos/newMexico/roof_sunset.jpg
   alt: A rooftop bar at sunset
   city: Albuquerque
-  description: A rooftop bar at sunset
+  description: We weren't able to get a seat outside so I had to run out a couple of times and take this.
 
 - image: ./photos/newMexico/rug_house.jpg
-  alt: An old rug shop in Old Towne Albuquerque
-  city: Albuquerque
-  description: I love the patina of this old building.
+  alt: An old rug shop in Old Town Albuquerque
+  city: Old Town, Albuquerque
+  description: I love the patina of this old building. It's all on purpose, I'm sure, but still nice!
 
 - image: ./photos/newMexico/sky_chapel.jpg
   alt: An old church in the middle of nowhere New Mexico
   city: Somewhere in New Mexico
-  description: We were driving in the middle of nowhere New Mexico when we saw this little church and just had to stop. There was a cemetary in front and no one else in sight.
+  description: We were driving in the middle of nowhere New Mexico when we saw this little church. Of course, we had to stop. There was a cemetary in front and no one else in sight.
 
 - image: ./photos/newMexico/stormy_pueblo.jpg
   alt: A pueblo with a dark storm brewing behind it
-  city: Somewhere in Albuquerque
-  description: Racing to see this pueblo before the storm ran through, it proved for a gorgeous backdrop
+  city: Pecos National Park
+  description: At first we were upset because it looked like we were going to have to miss this park because of the brewing storm, but luckily it held out long enough to give some gorgeous backdrops.
 
 - image: ./photos/newMexico/sunset_through_window.jpg
   alt: A sunset through a window
@@ -120,6 +120,6 @@
 
 - image: ./photos/newMexico/window_with_flowers.jpg
   alt: A yet-to-bloom sunflower against an adobe wall
-  city: Santa Fe
+  city: Canyon Road, Santa Fe
   description: Simple beauty at its best.
 

@@ -1,25 +1,19 @@
 - image: ./photos/arizona/blue_eyed_dog.jpg
   alt: A dog with one blue and one brown eye tied up to a planter waiting patiently for its owner to return
   city: Sedona
-  description: I saw this dog waiting patiently for its owner to return and wanted to take it's picture. It wasn't until I looked at the picture later on that I even noticed it's two different eyes.
+  description: This dog was waiting all alone very patiently for its owner to get out of the nearby store. It wasn't until I looked at the picture later that I even noticed it had two different colored eyes.
 
 - image: ./photos/arizona/cactus_switchbacks.jpg
   alt: A close up on an agave plant with trail switchbacks in the background
-  city: Grand Canyon
-  description: On a break during a hike of Angel's Landing, I saw this agave plant growing on the side of the cliff. You can't tell, but it's a complete drop-off here.
+  city: Bright Angel, Grand Canyon
+  description: I saw this agave plant growing on the side of the cliff while we took a break from hiking the Bright Angel trail. You can't tell from this picture, but it's a complete drop-off here 😬.
 
 - image: ./photos/arizona/cathedral_rock_sunset.jpg
   alt: A man sits on the ledge of Cathedral Rock watching the sunset
-  city: Sedona
-  description: We weren't able to get out there in time for the sunset (there was a line), but we were still able to get some nice shots.
+  city: Cathedral Rock, Sedona
+  description: We weren't able to get out on the ledge in time for the sunset (there was a line), but we were still able to get some nice shots.
 
 - image: ./photos/arizona/horseshoe_bend.jpg
   alt: A cross section of the famous Horseshoe Bend
-  city: Horseshoe Bend
-  description: This is what you get when you don't have a wide-angle lens. Oh well, everyone has take that iconic shot a million times.
-
-- image: ./photos/arizona/old_red_building.jpg
-  alt: An old, red abandoned building sits on the side of the road next to a stream with mountains in the background
-  city: Somewhere
-  description: I believe we were leaving Bryce Canyon when we found this old abandoned building that looked like it was previously a mill of some sort.
-
+  city: Horseshoe Bend, Page
+  description: This is what you get when you don't have a wide-angle lens. Oh well, everyone has already taken that iconic shot a million times, right?
