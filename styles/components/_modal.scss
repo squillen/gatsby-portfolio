@@ -28,6 +28,5 @@
   max-width: 70rem;
   @include respond(tab-port) {
     width: 80vw;
-    height: 95vh;
   }
 }
