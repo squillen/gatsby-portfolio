@@ -131,7 +131,7 @@ const CodePage = () => {
     <main className="code-container">
       <DefaultHelmet
         title="Code - Sean Quillen"
-        description="Sean Quillen shares a couple of sites he created, including What Should I Do Tonight (whatshouldidotonight.com), a site to find things to do tonight, a charity-based gift site, cherryTree (cherrytree.cc), and a friend-finding, good-doing site called Cleann Upp (cleannupp.com)."
+        description="Sean Quillen shares a couple of sites he created, including What Should I Do Tonight (whatshouldidotonight.com), a site to find things to do tonight, cherryTree (cherrytree.cc), a charity-based gift site, and Cleann Upp (cleannupp.com), a friend-finding, do-gooding site to help clean up trash from your area."
       />
       <DynamicHeader header="Code" headerArrowRight />
       <section className="project-section-container">
