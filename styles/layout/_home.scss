@@ -184,7 +184,7 @@
       font-size: 5rem;
     }
   }
-  @include setBackground("../../src/images/home/sedona_dog.jpg", right);
+  @include setBackground("../../src/images/photos/arizona/blue_eyed_dog.jpg", right);
   @include respond(phone) {
     margin-top: 3rem;
   }
