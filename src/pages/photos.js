@@ -63,7 +63,7 @@ const PhotosPage = ({ data }) => {
     <main className="photos-page-container" onKeyDown={handleKeyDown}>
       <DefaultHelmet
         title="Photos - Sean Quillen"
-        description="Some photos I've taken since March 2020."
+        description="Some photos by Sean Quillen across several US states include Arizona, Maine, Texas, and New Mexico."
       />
       <DynamicHeader header="Photos" id="home" headerArrowRight />
       <section className="photos-page-intro">

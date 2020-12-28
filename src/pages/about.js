@@ -22,7 +22,7 @@ const AboutPage = () => {
     <main className="about-container">
       <DefaultHelmet
         title="About Sean Quillen"
-        description="Some info about me, Sean Quillen!"
+        description="Some info about me, Sean Quillen! I'm a web developer living in Austin, TX. I take photos, create fun websites, and living life."
       />
       <DynamicHeader header="About" subHeader="me" subHeaderRight />
       <section className="about-info">

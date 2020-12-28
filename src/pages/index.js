@@ -10,7 +10,7 @@ const IndexPage = () => {
     <main className="index-container">
       <DefaultHelmet
         title="Sean Quillen Portfolio"
-        description="Personal site for developer Sean Quillen, creator of sites whatshouldidotonight.com, cherrytree.cc, cleannupp.com"
+        description="Personal site for Austin-based web developer Sean Quillen, creator of the websites What Should I Do Tonight (whatshouldidotonight.com), cherryTree (cherrytree.cc), and Cleann Upp (cleannupp.com)."
       />
       <Header />
       <Home />
