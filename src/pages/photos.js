@@ -191,14 +191,13 @@ function displayPhotos(data, header, setSelectedImageInfo) {
   return (
     <section className="photos-container">
       <div className="section-header">
-        <h2 className="photos-container-header">{header}</h2>
+        <h2 onClick={() => setSelectedImageInfo(data.edges, 0, header)} className={`photos-container-header-${header.split(' ').join('-')}`}>{header}</h2>
         <Link className="home" to="#home"><FaChevronUp /></Link>
       </div>
       <ul className="photos-list" id={header}>
         {
           data.edges.map(({ node }, idx) => (
             <li className="photo-list-item" onClick={() => setSelectedImageInfo(data.edges, idx, header)}>
-              {/* <div className="overlay"></div> */}
               <Img
                 data-hover={node.city}
                 style={{ display: 'inherit' }}

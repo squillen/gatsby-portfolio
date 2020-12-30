@@ -139,11 +139,61 @@
   color: $color-black;
 }
 
-.photos-container-header {
+@mixin blackHeaderCenter {
+  @include blackHover;
   text-align: center;
   font-size: 5rem;
   justify-self: center;
   align-self: center;
+}
+
+@mixin photoHeader {
+  cursor: pointer;
+  text-align: center;
+  font-size: 5rem;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  &:before {
+    @include blackHeaderCenter;
+  }
+  &:hover:before {
+    @include blackHeaderCenter;
+    width: 100%;
+  }
+}
+
+.photos-container-header {
+  &-Arizona {
+    @include photoHeader;
+    &:before {
+      content: 'Arizona';
+    }
+  }
+  &-Maine {
+    @include photoHeader;
+    &:before {
+      content: 'Maine';
+    }
+  }
+  &-New-Mexico {
+    @include photoHeader;
+    &:before {
+      content: 'New Mexico';
+    }
+  }
+  &-Arizona {
+    @include photoHeader;
+    &:before {
+      content: 'Arizona';
+    }
+  }
+  &-Texas {
+    @include photoHeader;
+    &:before {
+      content: 'Texas';
+    }
+  }
 }
 
 .photos-list {
