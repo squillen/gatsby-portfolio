@@ -25,10 +25,10 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-heap',
       options: {
-        trackingId: "UA-185720397-1",
-        head: true,
+        appId: process.env.HEAP_ID,
+        enableOnDevMode: true  // if 'false', heap will be fired on NODE_ENV=production only
       },
     },
     "gatsby-plugin-sharp",
