@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { FaRegHandPaper } from 'react-icons/fa'
+import BackgroundImage from 'gatsby-background-image'
 
 // ARROWS
 import straightArrow from '../src/images/svgs/arrows/straight-arrow.svg';
@@ -12,13 +12,40 @@ import envelope from '../src/images/svgs/icons/envelope.svg';
 import github from '../src/images/svgs/icons/github.svg';
 import linkedin from '../src/images/svgs/icons/linkedin.svg';
 
-const Home = () => {
+const Home = ({ data }) => {
+  const [code, about, photos] = data.photos.edges
+  const aboutPicture = (
+    <BackgroundImage
+      Tag="section"
+      className="section-block-background"
+      fluid={about.node.image.childImageSharp.fluid}
+    > 
+      <Link className="section-block-about" data-hover="about" to="/about"></Link>
+    </BackgroundImage>
+  )
+  const codePicture = (
+    <BackgroundImage
+      Tag="section"
+      className="section-block-background"
+      fluid={code.node.image.childImageSharp.fluid}
+    > 
+      <Link className="section-block-code" data-hover="code" to="/code"></Link>
+    </BackgroundImage>
+  )
+  const photosPicture = (
+    <BackgroundImage
+      Tag="section"
+      className="section-block-background"
+      fluid={photos.node.image.childImageSharp.fluid}
+    > 
+      <Link data-hover="photos." className="section-block-photos" to="/photos"></Link>
+    </BackgroundImage>
+  )
   return (
     <section className="section-container">
       <div className="mobile">
         <section className="section-container-about">
-          {/* MY PICTURE */}
-          <Link className="section-block-about" data-hover="about" to="/about"></Link>
+          {aboutPicture}
           <div className="section-text-container">
             <img className="arrow rotate90 about-arrow" src={wavyTurn} alt="arrow pointing left to the word 'writes'"/>
             <div className="row-container">
@@ -28,17 +55,15 @@ const Home = () => {
           </div>
         </section>
         <section className="section-container-about">
-          {/* CODE PICTURE */}
-          <Link className="section-block-code" data-hover="code" to="/code"></Link>
-            <img className="arrow rotate90 about-arrow" src={wavyTurn} alt="arrow pointing down to the word 'photos'" />
-            <div className="section-text-container">
-              <h2 className="description-text">and takes</h2>
-              <img className="arrow rotate90 about-arrow" src={loopArrow} alt="arrow pointing down to the photos section"/>
-            </div>
+          {codePicture}
+          <img className="arrow rotate90 about-arrow" src={wavyTurn} alt="arrow pointing down to the word 'photos'" />
+          <div className="section-text-container">
+            <h2 className="description-text">and takes</h2>
+            <img className="arrow rotate90 about-arrow" src={loopArrow} alt="arrow pointing down to the photos section"/>
+          </div>
         </section>
         <section className="section-container-photos">
-          {/* PHOTOS PICTURE */}
-          <Link data-hover="photos." className="section-block-photos" to="/photos"></Link>
+          {photosPicture}
         </section>
         <section className="section-container-contact">
           <div className="section-text-container">
@@ -53,7 +78,6 @@ const Home = () => {
         </section>
       </div>
 
-
       <div className="desktop">
         <section className="section-container-about">
           <div className="section-text-container">
@@ -61,25 +85,22 @@ const Home = () => {
             <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing down to the code section" />
           </div>
           <img className="arrow rotate180 about-arrow" src={straightArrow} alt="arrow pointing left to the word 'writes'"/>
-          {/* MY PICTURE */}
-          <Link className="section-block-about" data-hover="about" to="/about"></Link>
+          {aboutPicture}
         </section>
         <section className="section-container-about">
-          {/* CODE PICTURE */}
-          <Link className="section-block-code" data-hover="code" to="/code"></Link>
-            <img className="arrow about-arrow" src={straightArrow} alt="arrow pointing down to the code section" />
-            <div className="section-text-container">
-              <h2 className="description-text">and takes</h2>
-              <img className="arrow rotate90 photos-arrow" src={slightCurve} alt="arrow pointing down to the word 'photos'"/>
-            </div>
+          {codePicture}
+          <img className="arrow about-arrow" src={straightArrow} alt="arrow pointing down to the code section" />
+          <div className="section-text-container">
+            <h2 className="description-text">and takes</h2>
+            <img className="arrow rotate90 photos-arrow" src={slightCurve} alt="arrow pointing down to the word 'photos'"/>
+          </div>
         </section>
         <section className="section-container-photos">
           <div className="section-text-container">
             <h2 className="description-text">say hi</h2>
             <img className="arrow rotate90 contact-arrow" src={slightCurve} alt="arrow pointing left to the word 'writes'"/>
           </div>
-          {/* PHOTOS PICTURE */}
-          <Link data-hover="photos." className="section-block-photos" to="/photos"></Link>
+          {photosPicture}
         </section>
         <section className="section-container-contact">
           <div className="contact-icons-container">

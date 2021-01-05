@@ -5,7 +5,7 @@ import Home from "../../components/Home"
 import Footer from "../../components/Footer"
 import '../../styles/main.scss'
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <main className="index-container">
       <DefaultHelmet
@@ -13,10 +13,29 @@ const IndexPage = () => {
         description="Personal site for Austin-based web developer Sean Quillen, creator of the websites What Should I Do Tonight (whatshouldidotonight.com), cherryTree (cherrytree.cc), and Cleann Upp (cleannupp.com)."
       />
       <Header />
-      <Home />
+      <Home data={data} />
       <Footer />
     </main>
   )
 }
+
+
+export const query = graphql`
+  {
+    photos: allHomePhotosYaml {
+      edges {
+        node {
+          image {
+            childImageSharp {
+              fluid(quality: 100, maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
