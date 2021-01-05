@@ -13,24 +13,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          'Londrina Outline',
-          'Londrina Solid',
-          'Oswald',
-          `source sans pro\:300,400,400i,700`
-        ],
-        display: 'swap'
-      }
-    },
-    {
       resolve: 'gatsby-plugin-heap',
       options: {
         appId: process.env.HEAP_ID,
         enableOnDevMode: true  // if 'false', heap will be fired on NODE_ENV=production only
       },
     },
+    `gatsby-plugin-preload-fonts`,
     "gatsby-plugin-sharp",
     `gatsby-transformer-yaml`,
     "gatsby-plugin-react-helmet",

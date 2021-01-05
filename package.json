@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
+    "preload-fonts": "gatsby-preload-fonts",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -18,10 +19,10 @@
   "dependencies": {
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.8.0",
-    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-heap": "^1.1.0",
     "gatsby-plugin-manifest": "^2.9.0",
     "gatsby-plugin-offline": "^3.7.1",
+    "gatsby-plugin-preload-fonts": "^1.6.1",
     "gatsby-plugin-react-helmet": "^3.7.0",
     "gatsby-plugin-sass": "^2.8.0",
     "gatsby-plugin-sharp": "^2.11.1",
