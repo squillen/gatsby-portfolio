@@ -1,16 +1,21 @@
-import React, { useState } from "react"
-import ReactMarkdown from "react-markdown"
-import DefaultHelmet from "../../components/DefaultHelmet"
-import DynamicHeader from "../../components/DynamicHeader"
-import '../../styles/main.scss'
-import WSIDT from '../images/code/what_should_i_do_tonight.png'
-import cherryTree from '../images/code/cherryTree_logo.png'
-import cleannupp from '../images/code/cleannupp_logo.png'
-import blob1 from '../images/svgs/blobs/blob1.svg'
-import blob2 from '../images/svgs/blobs/blob2.svg'
-import blob3 from '../images/svgs/blobs/blob3.svg'
-import blob4 from '../images/svgs/blobs/blob4.svg'
-import blob5 from '../images/svgs/blobs/blob5.svg'
+import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import DefaultHelmet from "../../components/DefaultHelmet";
+import DynamicHeader from "../../components/DynamicHeader";
+import "../../styles/main.scss";
+// PROJECT LOGOS
+import WSIDT from "../images/code/what_should_i_do_tonight.png";
+import cherryTree from "../images/code/cherryTree_logo.png";
+import cleannupp from "../images/code/cleannupp_logo.png";
+import atxhh from "../images/code/atxhh_logo.png";
+
+// BLOBS
+import blob1 from "../images/svgs/blobs/blob1.svg";
+import blob2 from "../images/svgs/blobs/blob2.svg";
+import blob3 from "../images/svgs/blobs/blob3.svg";
+import blob4 from "../images/svgs/blobs/blob4.svg";
+import blob5 from "../images/svgs/blobs/blob5.svg";
+import blob6 from "../images/svgs/blobs/blob6.svg";
 
 const blobs = {
   blob1,
@@ -18,29 +23,44 @@ const blobs = {
   blob3,
   blob4,
   blob5,
-}
+  blob6,
+};
 
 const projects = [
   {
+    src: atxhh,
+    alt: "ATXHH logo",
+    codeRef: "atxhh",
+    name: "ATXHH",
+    href: "https://atxhappyhr.com",
+    tagline: "Eat. Drink. Austin.",
+    description: [
+      "You want to eat. You want to drink. But you don't want to spend too long looking up Austin happy hours. (Say it in your infomercial voice--you'll want this site so much more.) ",
+      "ATXHH has got your back. Well, more accurately, we've got your front, like your mouth and your stomach. We've eventually got your back, though...",
+      "It's a simple react front end with a MongoDB Realm backend utilizing GraphQL queries and mutations. Images are hosted on Amazon S3 and it's deployed via Vercel.",
+    ],
+    blobName: "blob6",
+  },
+  {
     src: WSIDT,
-    codeRef: 'wsidt',
-    name: 'What Should I Do Tonight',
-    alt: 'What Should I Do Tonight logo',
-    href: 'https://whatshouldidotonight.com',
-    tagline: 'A good night in a site.',
+    codeRef: "wsidt",
+    name: "What Should I Do Tonight",
+    alt: "What Should I Do Tonight logo",
+    href: "https://whatshouldidotonight.com",
+    tagline: "A good night in a site.",
     description: [
       "The site designed for nights. I got the idea after doing a web search for things to do that night before going to my girlfriend's house. There were a couple of scattered results and none of them good, so I thought I'd make one of my own!",
       "It originally started as a random idea generator but, to appease the Google Gods, I decided to make it into more of a mainstream site with articles, reviews, and ideas, all centered around making peoples' nights better.",
-      "It's a Next.js app deployed via Vercel. State managed with Redux. Mongo Atlas database. Contact emails sent via Nodemailer. Images hosted on AWS s3."
+      "It's a Next.js app deployed via Vercel. State managed with Redux. Mongo Atlas database. Contact emails sent via Nodemailer. Images hosted on AWS s3.",
     ],
-    blobName: 'blob1',
+    blobName: "blob1",
   },
   {
     src: cherryTree,
-    name: 'cherryTree',
-    codeRef: 'cherryTree',
-    alt: 'cherryTree logo',
-    href: 'https://cherryTree.cc',
+    name: "cherryTree",
+    codeRef: "cherryTree",
+    alt: "cherryTree logo",
+    href: "https://cherryTree.cc",
     tagline: "Be more cherry'tible",
     description: [
       "cherryTree is a site that allows people who are celebrating special occasions to ask others to donate to charities in lieu of giving them gifts.",
@@ -48,83 +68,109 @@ const projects = [
       "I wanted them to donate for a couple of reasons:",
       "-  I was fortunate enough to really just not need anything else. \n-  Clutter is annoying. \n  -  I lived for the smug sense of magnanimity I got from it. Kidding.",
       "When I got older and saw into the world of wedding registries, I again thought that I just wouldn't need all of that stuff! That's when I put two and two together and thought of making this site.",
-      "It's a MERN app deployed via Azure (and Mongo Cosmos DB). Emails sent via mailgun. Payments processed with Stripe. Images hosted on AWS s3."
+      "It's a MERN app deployed via Azure (and Mongo Cosmos DB). Emails sent via mailgun. Payments processed with Stripe. Images hosted on AWS s3.",
     ],
-    blobName: 'blob2',
-
+    blobName: "blob2",
   },
   {
     src: cleannupp,
-    name: 'Cleann Upp',
-    codeRef: 'cleannUpp',
-    alt: 'Cleann Upp logo',
-    href: 'https://cleannupp.com',
-    tagline: 'Get outside. Meet new people. Cleann Upp.',
+    name: "Cleann Upp",
+    codeRef: "cleannUpp",
+    alt: "Cleann Upp logo",
+    href: "https://cleannupp.com",
+    tagline: "Get outside. Meet new people. Cleann Upp.",
     description: [
       "Like a lot of people, I like to get out in nature and hike. You might understand, then, the frustration and sadness that comes from seeing trash in an otherwise gorgeous setting. It instantly takes you out of them moment and reminds you of our negative impact on the world.",
       "So, to help, I started bringing trash bags with me and filling them up. People would comment about how it was a good, noble idea, so I then thought that others might enjoy doing the same thing. And, voila, Clean Up was born! Then, when I realized Clean Up was taken, voila! Cleann Upp was born! 😉",
-      'The idea is simple: do the activities you’d normally do (or maybe some you wouldn’t normally do!) but bring some trash bags and some friends (or meet some there) and get some karma out of it!',
+      "The idea is simple: do the activities you’d normally do (or maybe some you wouldn’t normally do!) but bring some trash bags and some friends (or meet some there) and get some karma out of it!",
       "It's MERN app deployed via Azure (and Mongo Cosmos DB). Images hosted on AWS s3 and AWS Cloudfront.",
     ],
-    blobName: 'blob3',
+    blobName: "blob3",
   },
   {
-    name: 'Do Austin',
-    codeRef: 'doAustin',
+    name: "Do Austin",
+    codeRef: "doAustin",
     tagline: "Alexa, what's going on in Austin tonight?",
     description: [
       "If you haven't heard, Austin is a pretty cool city. It's got so much going on, though, that a person could easily miss most of it! To help keep on top of it, I use the site [do512](https://do512.com/), which I thought I could also use as a fun way to learn how to create Alexa apps.",
       "You can ask her things like: \"Hey Alexa, ask Do Austin for some free things going on tomorrow night.\" She'll then reply with a list of things to do. If you're interested in a particular event, she can text you more details via Twilio.",
     ],
-    blobName: 'blob4',
+    blobName: "blob4",
   },
   {
-    name: 'Portfolio',
-    codeRef: 'portfolio',
+    name: "Portfolio",
+    codeRef: "portfolio",
     tagline: "Hey! It's me, this site!",
     description: [
       "This site was created with Gatsby and pure css.",
-      "I feel like I need to say more. It was also made with ❤️"
+      "I feel like I need to say more. It was also made with ❤️",
     ],
-    blobName: 'blob5',
+    blobName: "blob5",
   },
-]
+];
 const CodePage = () => {
-  const [selectedProject, setSelectedProject] = useState('wsidt')
+  const [selectedProject, setSelectedProject] = useState("atxhh");
   function handleProjectList({ codeRef, name }) {
     return (
-      <li onClick={() => setSelectedProject(codeRef)} className={selectedProject === codeRef ? `selected-${codeRef}` : `list-item-${codeRef}`}>{name}</li>
-    )
+      <li
+        onClick={() => setSelectedProject(codeRef)}
+        className={
+          selectedProject === codeRef
+            ? `selected-${codeRef}`
+            : `list-item-${codeRef}`
+        }
+      >
+        {name}
+      </li>
+    );
   }
 
-  function handleProjectDisplay({ href, src, alt, blobName, tagline, codeRef, description }) {
+  function handleProjectDisplay({
+    href,
+    src,
+    alt,
+    blobName,
+    tagline,
+    codeRef,
+    description,
+  }) {
     return (
-    <div className={selectedProject === codeRef ? `project-container-${codeRef}` : 'hidden'}>
-      {href && (
-        <div className="media-mobile">
-          <a href={href} rel="noreferrer" target="_blank">
-            <img className="project-logo" src={src} alt={alt}/>
-          </a>
-        </div>
-      )}  
-      <div className="tagline-container">
-        <h2 className="tagline-container-header">{tagline}</h2>
-        {blobName && <img src={blobs[blobName]} alt="blob" className='blob' />}
-      </div>
-      <div className="description-container">
-      <div className="description">
-          {description.map(d => <ReactMarkdown>{d}</ReactMarkdown>)}
-        </div>
+      <div
+        className={
+          selectedProject === codeRef
+            ? `project-container-${codeRef}`
+            : "hidden"
+        }
+      >
         {href && (
-          <div className="media-desktop">
+          <div className="media-mobile">
             <a href={href} rel="noreferrer" target="_blank">
-              <img className="project-logo" src={src} alt={alt}/>
+              <img className="project-logo" src={src} alt={alt} />
             </a>
           </div>
-        )}  
+        )}
+        <div className="tagline-container">
+          <h2 className="tagline-container-header">{tagline}</h2>
+          {blobName && (
+            <img src={blobs[blobName]} alt="blob" className="blob" />
+          )}
+        </div>
+        <div className="description-container">
+          <div className="description">
+            {description.map((d) => (
+              <ReactMarkdown>{d}</ReactMarkdown>
+            ))}
+          </div>
+          {href && (
+            <div className="media-desktop">
+              <a href={href} rel="noreferrer" target="_blank">
+                <img className="project-logo" src={src} alt={alt} />
+              </a>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
-    )
+    );
   }
 
   return (
@@ -135,17 +181,13 @@ const CodePage = () => {
       />
       <DynamicHeader header="Code" headerArrowRight />
       <section className="project-section-container">
-        <ul className="projects">
-          {projects.map(handleProjectList)}
-        </ul>
+        <ul className="projects">{projects.map(handleProjectList)}</ul>
         <section className="project-container">
           {projects.map(handleProjectDisplay)}
         </section>
       </section>
     </main>
-  )
-}
+  );
+};
 
-
-
-export default CodePage
+export default CodePage;

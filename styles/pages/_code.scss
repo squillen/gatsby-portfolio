@@ -71,6 +71,18 @@
 }
 
 .list-item {
+  &-atxhh {
+    &:before {
+      color: $color-atxhh;
+      content: "ATXHH";
+    }
+    &:hover:before {
+      @include blackHover;
+      color: $color-atxhh;
+      font-family: $primary-font-solid;
+      width: 100%;
+    }
+  }
   &-wsidt {
     &:before {
       color: $color-wsidt;
@@ -134,6 +146,11 @@
 }
 
 .selected {
+  &-atxhh {
+    @include listItem;
+    font-family: $primary-font-solid;
+    color: $color-atxhh;
+  }
   &-wsidt {
     @include listItem;
     font-family: $primary-font-solid;
@@ -182,8 +199,7 @@
 
 .project-logo {
   width: $logo-image-width;
-  height: $logo-image-height;
-  border-radius: 50%;
+  border-radius: 1rem;
   margin-right: 2rem;
 }
 
@@ -254,6 +270,7 @@
     }
   }
   &-mobile {
+    min-height: 15rem;
     @include media;
     display: none;
     @include respond(tab-port) {
@@ -265,7 +282,6 @@
 .project-logo {
   transition: all .5s;
   width: 20rem;
-  height: 20rem;
   &:hover {
     transform: scale(1.1);
   }
