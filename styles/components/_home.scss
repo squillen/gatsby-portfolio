@@ -229,8 +229,12 @@
 }
 
 .contact-logo {
+  transition: all 0.5s;
   width: $contact-width;
   height: $contact-height;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .section-block-background {
