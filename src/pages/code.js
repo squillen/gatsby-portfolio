@@ -35,9 +35,9 @@ const projects = [
     href: "https://atxhappyhr.com",
     tagline: "Eat. Drink. Austin.",
     description: [
-      "You want to eat. You want to drink. But you don't want to spend too long looking up Austin happy hours. (Say it in your infomercial voice--you'll want this site so much more.) ",
-      "ATXHH has got your back. Well, more accurately, we've got your front, like your mouth and your stomach. We've eventually got your back, though...",
-      "It's a simple react front end with a MongoDB Realm backend utilizing GraphQL queries and mutations. Images are hosted on Amazon S3 and it's deployed via Vercel.",
+      "You want to eat. You want to drink. But you don't want to spend too long looking up Austin happy hours. (Say it in your best infomercial voice and you'll want this site so much more.) ",
+      "Well, don't worry, ATXHH has got your back. Well, more accurately, we've got your front, like your mouth and your stomach. We've eventually got your back, though...3rd grade humor FTW.",
+      "It's a simple React frontend with a MongoDB Realm backend utilizing GraphQL queries and mutations. Images are hosted on Amazon S3 and it's deployed via Vercel.",
     ],
     blobName: "blob6",
   },
