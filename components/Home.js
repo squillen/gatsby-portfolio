@@ -1,79 +1,118 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import BackgroundImage from 'gatsby-background-image'
+import * as React from "react";
+import { Link } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 
 // ARROWS
-import straightArrow from '../src/images/svgs/arrows/straight-arrow.svg';
-import slightCurve from '../src/images/svgs/arrows/slight-curve-arrow-outline.svg';
-import wavyTurn from '../src/images/svgs/arrows/wavy-straight.svg';
-import loopArrow from '../src/images/svgs/arrows/loop-arrow-straight.svg';
+import straightArrow from "../src/images/svgs/arrows/straight-arrow.svg";
+import slightCurve from "../src/images/svgs/arrows/slight-curve-arrow-outline.svg";
+import wavyTurn from "../src/images/svgs/arrows/wavy-straight.svg";
+import loopArrow from "../src/images/svgs/arrows/loop-arrow-straight.svg";
 // ICONS
-import envelope from '../src/images/svgs/icons/envelope.svg';
-import github from '../src/images/svgs/icons/github.svg';
-import linkedin from '../src/images/svgs/icons/linkedin.svg';
+import envelope from "../src/images/svgs/icons/envelope.svg";
+import github from "../src/images/svgs/icons/github.svg";
+import linkedin from "../src/images/svgs/icons/linkedin.svg";
 
 const Home = ({ data }) => {
-  const [code, about, photos] = data.photos.edges
+  const [code, about, photos] = data.photos.edges;
   const aboutPicture = (
     <BackgroundImage
       Tag="section"
       className="section-block-background"
       fluid={about.node.image.childImageSharp.fluid}
-    > 
-      <Link className="section-block-about" data-hover="about" to="/about"></Link>
+    >
+      <Link
+        className="section-block-about"
+        data-hover="about"
+        to="/about"
+      ></Link>
     </BackgroundImage>
-  )
+  );
   const codePicture = (
     <BackgroundImage
       Tag="section"
       className="section-block-background"
       fluid={code.node.image.childImageSharp.fluid}
-    > 
+    >
       <Link className="section-block-code" data-hover="code" to="/code"></Link>
     </BackgroundImage>
-  )
+  );
   const photosPicture = (
     <BackgroundImage
       Tag="section"
       className="section-block-background"
       fluid={photos.node.image.childImageSharp.fluid}
-    > 
-      <Link data-hover="photos." className="section-block-photos" to="/photos"></Link>
+    >
+      <Link
+        data-hover="photos."
+        className="section-block-photos"
+        to="/photos"
+      ></Link>
     </BackgroundImage>
-  )
+  );
   return (
     <section className="section-container">
       <div className="mobile">
         <section className="section-container-about">
           {aboutPicture}
           <div className="section-text-container">
-            <img className="arrow rotate90 about-arrow" src={wavyTurn} alt="arrow pointing left to the word 'writes'"/>
-            <div className="row-container">
-            </div>
-              <h2 className="description-text">writes</h2>
-              <img className="arrow rotate90 about-arrow" src={loopArrow} alt="arrow pointing down to the code section" />
+            <img
+              className="arrow rotate90 about-arrow"
+              src={wavyTurn}
+              alt="arrow pointing left to the word 'writes'"
+            />
+            <div className="row-container"></div>
+            <h2 className="description-text">writes</h2>
+            <img
+              className="arrow rotate90 about-arrow"
+              src={loopArrow}
+              alt="arrow pointing down to the code section"
+            />
           </div>
         </section>
         <section className="section-container-about">
           {codePicture}
-          <img className="arrow rotate90 about-arrow" src={wavyTurn} alt="arrow pointing down to the word 'photos'" />
+          <img
+            className="arrow rotate90 about-arrow"
+            src={wavyTurn}
+            alt="arrow pointing down to the word 'photos'"
+          />
           <div className="section-text-container">
             <h2 className="description-text">and takes</h2>
-            <img className="arrow rotate90 about-arrow" src={loopArrow} alt="arrow pointing down to the photos section"/>
+            <img
+              className="arrow rotate90 about-arrow"
+              src={loopArrow}
+              alt="arrow pointing down to the photos section"
+            />
           </div>
         </section>
-        <section className="section-container-photos">
-          {photosPicture}
-        </section>
+        <section className="section-container-photos">{photosPicture}</section>
         <section className="section-container-contact">
           <div className="section-text-container">
             <h2 className="description-text">say hi</h2>
-            <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing left to the word 'writes'"/>
+            <img
+              className="arrow rotate90 about-arrow"
+              src={straightArrow}
+              alt="arrow pointing left to the word 'writes'"
+            />
           </div>
           <div className="contact-icons-container">
-            <a href="https://www.github.com/squillen"><img className="contact-logo" src={github} alt="link to my github"/></a>
-            <a href="https://www.linkedin.com/in/sean-quillen/"><img className="contact-logo" src={linkedin} alt="link to my linkedin"/></a>
-            <a href="mailto: sean.r.quillen@gmail.com"><img className="contact-logo" src={envelope} alt="email me"/></a>
+            <a href="https://www.github.com/squillen">
+              <img
+                className="contact-logo"
+                src={github}
+                alt="link to my github"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/sean-quillen/">
+              <img
+                className="contact-logo"
+                src={linkedin}
+                alt="link to my linkedin"
+              />
+            </a>
+            <a href="mailto: sean.r.quillen@gmail.com">
+              <img className="contact-logo" src={envelope} alt="email me" />
+            </a>
           </div>
         </section>
       </div>
@@ -82,43 +121,77 @@ const Home = ({ data }) => {
         <section className="section-container-about">
           <div className="section-text-container">
             <h2 className="description-text">writes</h2>
-            <img className="arrow rotate90 about-arrow" src={straightArrow} alt="arrow pointing down to the code section" />
+            <img
+              className="arrow rotate90 about-arrow"
+              src={straightArrow}
+              alt="arrow pointing down to the code section"
+            />
           </div>
-          <img className="arrow rotate180 about-arrow" src={straightArrow} alt="arrow pointing left to the word 'writes'"/>
+          <img
+            className="arrow rotate180 about-arrow"
+            src={straightArrow}
+            alt="arrow pointing left to the word 'writes'"
+          />
           {aboutPicture}
         </section>
         <section className="section-container-about">
           {codePicture}
-          <img className="arrow about-arrow" src={straightArrow} alt="arrow pointing down to the code section" />
+          <img
+            className="arrow about-arrow"
+            src={straightArrow}
+            alt="arrow pointing down to the code section"
+          />
           <div className="section-text-container">
             <h2 className="description-text">and takes</h2>
-            <img className="arrow rotate90 photos-arrow" src={slightCurve} alt="arrow pointing down to the word 'photos'"/>
+            <img
+              className="arrow rotate90 photos-arrow"
+              src={slightCurve}
+              alt="arrow pointing down to the word 'photos'"
+            />
           </div>
         </section>
         <section className="section-container-photos">
           <div className="section-text-container">
             <h2 className="description-text">say hi</h2>
-            <img className="arrow rotate90 contact-arrow" src={slightCurve} alt="arrow pointing left to the word 'writes'"/>
+            <img
+              className="arrow rotate90 contact-arrow"
+              src={slightCurve}
+              alt="arrow pointing left to the word 'writes'"
+            />
           </div>
           {photosPicture}
         </section>
         <section className="section-container-contact">
           <div className="contact-icons-container">
-            <a href="https://www.github.com/squillen"><img className="contact-logo" src={github} alt="link to my github"/></a>
-            <a href="https://www.linkedin.com/in/sean-quillen/"><img className="contact-logo" src={linkedin} alt="link to my linkedin"/></a>
-            <a href="mailto: sean.r.quillen@gmail.com"><img className="contact-logo" src={envelope} alt="email me"/></a>
+            <a href="https://www.github.com/squillen">
+              <img
+                className="contact-logo"
+                src={github}
+                alt="link to my github"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/sean-quillen/">
+              <img
+                className="contact-logo"
+                src={linkedin}
+                alt="link to my linkedin"
+              />
+            </a>
+            <a href="mailto: sean.r.quillen@gmail.com">
+              <img className="contact-logo" src={envelope} alt="email me" />
+            </a>
           </div>
         </section>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Home
-
+export default Home;
 
 // COLUMN CHEAT SHEET
-{/* <main className="grid">
+{
+  /* <main className="grid">
       <div className="row">
         <div className="col-1-of-2">col 1 of 2</div>
         <div className="col-1-of-2">col 1 of 2</div>
@@ -141,4 +214,5 @@ export default Home
         <div className="col-3-of-4">col 3 of 4</div>
         <div className="col-1-of-4">col 1 of 4</div>
       </div>
-    </main> */}
+    </main> */
+}
