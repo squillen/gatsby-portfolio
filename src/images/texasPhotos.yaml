@@ -28,11 +28,6 @@
   city: Austin
   description: Foster dog Coop being goofy and handsome as ever
 
-- image: ./photos/texas/cotton-eyed-pam.jpg
-  alt: Woman sitting in a field of cotton
-  city: Somewhere
-  description: An instagrammer's heaven
-
 - image: ./photos/texas/turbine_sunset.jpg
   alt: Wind turbines in the sunset
   city: Somewhere in Texas
@@ -67,8 +62,3 @@
   alt: Old poodle peaking from behind tree
   city: Austin
   description: This old, gentle poodle was busy investigating a new lawn and popped out to say hi.
-
-- image: ./photos/texas/pammy_lady_bird.jpg
-  alt: Girl in front of Lady Bird Lake
-  city: Austin
-  description: My beautiful girlfriend standing in front of Lady Bird Lake.
